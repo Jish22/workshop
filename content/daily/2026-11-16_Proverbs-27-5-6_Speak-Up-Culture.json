@@ -1,0 +1,322 @@
+{
+  "date": "2026-11-16",
+  "title": "The Battle Before The Battle",
+  "subtitle": "Speak-Up Culture",
+  "tagline": "A culture that cannot correct small problems may eventually be confronted by much larger ones.",
+  "headline": "Speak-Up Culture",
+  "headline_sub": "When Correction Is Built Into the System",
+  "slug": "speak-up-culture",
+  "series": "The Battle Before the Battle",
+  "category": "Leadership & Culture",
+  "seo_title": "Speak-Up Culture: Building Correction Into the System",
+  "seo_description": "Faithful are the wounds of a friend. How leaders build a speak-up culture where concerns surface early, get a fair hearing and lead to action without retaliation.",
+  "keywords": [
+    "speak-up culture",
+    "psychological safety",
+    "feedback culture",
+    "church accountability",
+    "Proverbs 27",
+    "Christian leadership"
+  ],
+  "og_image": "/assets/og/speak-up-culture.png",
+  "og_image_alt": "Speak-Up Culture: A culture that cannot correct small problems may eventually be confronted by much larger ones. TheWrkShop, Leadership & Culture.",
+  "scriptures": [
+    {
+      "ref": "Proverbs 27:5-6",
+      "text": "Better is open rebuke than hidden love. Wounds from a friend can be trusted, but an enemy multiplies kisses."
+    },
+    {
+      "ref": "Matthew 18:15",
+      "text": "If your brother or sister sins, go and point out their fault, just between the two of you. If they listen to you, you have won them over."
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Proverbs teaches that open rebuke can be better than hidden love, and that a friend’s wounds can be trusted."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jesus gives instruction for addressing sin between believers, beginning with direct, honest engagement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Correction is rarely comfortable."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "It can expose error.",
+            "Challenge assumptions.",
+            "Interrupt plans.",
+            "Threaten pride."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But Scripture presents faithful correction as something that can come from love."
+        },
+        {
+          "type": "paragraph",
+          "text": "That is a profound leadership distinction."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE PERSON WHO LOVES YOU MAY NOT ALWAYS BE THE PERSON WHO AGREES WITH YOU."
+        },
+        {
+          "type": "paragraph",
+          "text": "Imagine an organization where everyone speaks freely about problems after meetings but stays silent during them."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "People see the risks.",
+            "They recognize the weaknesses.",
+            "They understand the consequences."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But nobody wants to be the one who raises the concern."
+        },
+        {
+          "type": "paragraph",
+          "text": "The leader hears agreement."
+        },
+        {
+          "type": "paragraph",
+          "text": "The team privately holds reservations."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually the decision fails."
+        },
+        {
+          "type": "paragraph",
+          "text": "And everyone wonders why nobody spoke."
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“IF PEOPLE RESPECT ME, THEY WON’T CHALLENGE ME.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Respect does not require unquestioning agreement."
+        },
+        {
+          "type": "paragraph",
+          "text": "And unity does not require suppressing legitimate concerns."
+        },
+        {
+          "type": "paragraph",
+          "text": "A leader who demands agreement may unintentionally teach people to conceal information."
+        },
+        {
+          "type": "paragraph",
+          "text": "A team that punishes questions may gradually lose access to its own collective wisdom."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "SILENCE IN THE MEETING IS NOT THE SAME AS AGREEMENT."
+        },
+        {
+          "type": "paragraph",
+          "text": "It may not be evidence of a healthy organization at all."
+        },
+        {
+          "type": "paragraph",
+          "text": "It may be evidence that people have learned what happens when they speak."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Why do leaders resist correction?"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Fear of appearing incompetent.",
+            "Fear of losing authority.",
+            "Fear of embarrassment.",
+            "Pride.",
+            "And sometimes plain exhaustion."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Correction can feel like one more demand when someone is already carrying enormous responsibility."
+        },
+        {
+          "type": "paragraph",
+          "text": "But the deeper question remains:"
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "DO I WANT TO BE SEEN AS RIGHT, OR DO I WANT TO BECOME MORE FAITHFUL?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Those desires can conflict."
+        },
+        {
+          "type": "paragraph",
+          "text": "The leader who needs to appear right may resist the very information that would help him lead wisely."
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "HEALTHY AUTHORITY DOES NOT ELIMINATE CORRECTION. IT MAKES RESPONSIBLE CORRECTION POSSIBLE."
+        },
+        {
+          "type": "paragraph",
+          "text": "One caution matters here."
+        },
+        {
+          "type": "paragraph",
+          "text": "Matthew 18 describes a process for addressing sin within the community of believers. It should never be used to require someone to privately confront an unsafe person, or to bypass safeguarding, reporting obligations, or a proper investigation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Its broader call to truthful, responsible engagement is still valuable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Organizations need:"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "clear ways to raise concerns,",
+            "fair processes,",
+            "protection from retaliation,",
+            "leaders willing to listen,",
+            "and a clear distinction between honest disagreement, misconduct, and malicious accusation."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Correction should serve truth and restoration, not humiliation or control."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "Can someone raise a concern early, get a fair hearing, and see appropriate action without paying for it?",
+            "What happens when a junior employee questions a senior leader?",
+            "Are people rewarded for identifying risks before they become crises?",
+            "Does leadership respond differently when criticism comes from someone without influence?",
+            "What truth might people be withholding because of how we responded last time?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ask your team, or your wife, one question:"
+        },
+        {
+          "type": "quote",
+          "text": "“What is difficult to tell me?”"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Listen without immediately defending yourself.",
+            "Thank people for honest concerns.",
+            "Examine the substance.",
+            "Act where necessary."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then show through consistent behavior that responsible truth-telling is welcome."
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "A culture that cannot correct small problems may eventually be confronted by much larger ones."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, make me teachable. Expose where pride has made correction feel threatening. Give me courage to speak truth with love and humility to receive it. Help us build communities where people can raise concerns responsibly and where correction leads toward faithfulness. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "The person who loves you may not always agree with you."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "“What is difficult to tell me?”"
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "A leader’s response to correction teaches the organization whether truth is welcome."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "The goal is not to appear right but to become more faithful."
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-16_proverbs-27-5-6_speak-up-culture|"
+}

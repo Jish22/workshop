@@ -1,0 +1,316 @@
+{
+  "date": "2026-11-04",
+  "title": "The Battle Before The Battle",
+  "subtitle": "Tradition vs. Scripture",
+  "tagline": "“We’ve always done it this way” is historical information, not biblical authority.",
+  "headline": "Tradition vs. Scripture",
+  "headline_sub": "When “We’ve Always Done It This Way” Becomes Law",
+  "slug": "tradition-vs-scripture",
+  "series": "The Battle Before the Battle",
+  "category": "Leadership & Culture",
+  "seo_title": "Tradition vs. Scripture: “We’ve Always Done It This Way”",
+  "seo_description": "When does a tradition quietly become law? A biblical look at Mark 7 and how churches, teams and families can tell God’s commands from human preferences.",
+  "keywords": [
+    "tradition vs Scripture",
+    "we've always done it this way",
+    "sacred cows",
+    "church tradition",
+    "organizational culture",
+    "Christian leadership"
+  ],
+  "og_image": "/assets/og/tradition-vs-scripture.png",
+  "og_image_alt": "Tradition vs. Scripture: “We’ve always done it this way” is historical information, not biblical authority. TheWrkShop, Leadership & Culture.",
+  "scriptures": [
+    {
+      "ref": "Mark 7:8",
+      "text": "You have let go of the commands of God and are holding on to human traditions."
+    },
+    {
+      "ref": "Mark 7:13",
+      "text": "Thus you nullify the word of God by your tradition that you have handed down. And you do many things like that."
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jesus confronts religious leaders who elevate human traditions while neglecting God’s commands. He exposes how a practice called Corban could be used to avoid caring for one’s own parents."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is something deeply unsettling about Mark 7."
+        },
+        {
+          "type": "paragraph",
+          "text": "The people Jesus confronts are not rejecting religion. They are defending religious practices."
+        },
+        {
+          "type": "paragraph",
+          "text": "They know the language. They understand the customs. They believe they are preserving faithfulness."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yet Jesus exposes a contradiction."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THEIR TRADITION HAS BECOME A WAY OF AVOIDING OBEDIENCE."
+        },
+        {
+          "type": "paragraph",
+          "text": "They are defending something associated with God while neglecting something actually commanded by God."
+        },
+        {
+          "type": "paragraph",
+          "text": "That’s the danger."
+        },
+        {
+          "type": "paragraph",
+          "text": "A practice can begin with good intentions. It can serve a generation faithfully. It can become familiar, respected, and deeply meaningful."
+        },
+        {
+          "type": "paragraph",
+          "text": "But somewhere along the way, the question changes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Instead of asking, “Does this honor God?” we begin asking, “Why would anyone change what we’ve always done?”"
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "HISTORY HAS QUIETLY BECOME AUTHORITY."
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“IF FAITHFUL PEOPLE ESTABLISHED IT, QUESTIONING IT MUST BE UNFAITHFUL.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider a church that has run a ministry the same way for thirty years."
+        },
+        {
+          "type": "paragraph",
+          "text": "Someone suggests a different approach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before anyone examines the idea, leadership responds:"
+        },
+        {
+          "type": "quote",
+          "text": "“Our founding pastor established this.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "That explains the practice’s origin."
+        },
+        {
+          "type": "paragraph",
+          "text": "It doesn’t establish that Scripture requires it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Or consider a family where an inherited expectation is presented as biblical obedience, even though it reflects a parent’s preference."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now disagreement feels like rebellion against God."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "A HUMAN PREFERENCE HAS BEEN PROMOTED INTO A SPIRITUAL OBLIGATION."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "What makes traditions so difficult to examine?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sometimes it is gratitude. We genuinely appreciate those who came before us."
+        },
+        {
+          "type": "paragraph",
+          "text": "But sometimes it is something quieter: if this practice was wrong, what does that say about us, and about the people we love who built it?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Watch the progression:"
+        },
+        {
+          "type": "flow",
+          "steps": [
+            "Familiarity",
+            "Comfort",
+            "Attachment",
+            "Identity",
+            "Examination feels like a threat"
+          ],
+          "caption": "Eventually we stop defending the practice’s purpose and start defending what it represents to us."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE BATTLE BEGINS WHEN QUESTIONING MY METHOD FEELS LIKE QUESTIONING MY FAITH."
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "SCRIPTURE MUST EXAMINE OUR TRADITIONS. OUR TRADITIONS MUST NEVER OVERRULE SCRIPTURE."
+        },
+        {
+          "type": "paragraph",
+          "text": "This does not mean all tradition is wrong."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paul tells believers to hold to the teaching passed down by the apostles (2 Thessalonians 2:15)."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction matters."
+        },
+        {
+          "type": "paragraph",
+          "text": "God’s revealed truth carries authority."
+        },
+        {
+          "type": "paragraph",
+          "text": "Human customs require discernment."
+        },
+        {
+          "type": "paragraph",
+          "text": "A faithful organization, and a faithful home, learns to tell the difference between:"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "what Scripture commands,",
+            "what wisdom recommends,",
+            "and what leadership simply prefers."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Those are not interchangeable."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "Which of our practices do we treat as God’s commands when they’re really our preferences?",
+            "What do we require that Scripture does not?",
+            "Where does disagreement get labeled disloyalty?",
+            "What tradition would we struggle to reconsider because of who established it?",
+            "If Jesus examined our strongest expectations, which would He affirm, and which would He challenge?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Identify one practice you instinctively defend, at work, at church, or at home."
+        },
+        {
+          "type": "paragraph",
+          "text": "Examine its origin, its purpose, its biblical foundation, and its present fruit."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Preserve what is wise.",
+            "Change what no longer serves.",
+            "Repent where a human expectation has displaced God’s command."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Honor those who came before you without surrendering discernment."
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "“We’ve always done it this way” is historical information, not biblical authority."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, thank You for those who faithfully built before us. Give us gratitude without blindness, humility without fear, and courage without arrogance. Teach us to love Your Word more than our preferences. May our practices serve obedience rather than replace it. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "History explains a practice; it does not automatically justify it."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "A preference becomes dangerous when it is presented as God’s command."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Familiarity can quietly become authority."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Honor the past without surrendering discernment."
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-04_mark-7-8_tradition-vs-scripture|"
+}

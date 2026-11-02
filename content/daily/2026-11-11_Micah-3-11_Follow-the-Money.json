@@ -1,0 +1,321 @@
+{
+  "date": "2026-11-11",
+  "title": "The Battle Before The Battle",
+  "subtitle": "Follow the Money",
+  "tagline": "When money determines what can be said, it has begun exercising authority over the mission.",
+  "headline": "Follow the Money",
+  "headline_sub": "When the Money Starts Writing the Message",
+  "slug": "follow-the-money",
+  "series": "The Battle Before the Battle",
+  "category": "Leadership & Culture",
+  "seo_title": "Follow the Money: When Money Writes the Message",
+  "seo_description": "Micah 3 confronts leaders who taught for a price. How financial dependence on donors, clients or approval can quietly reshape what a church or business is willing to say.",
+  "keywords": [
+    "misaligned incentives",
+    "money and ministry",
+    "donor influence",
+    "integrity in leadership",
+    "Micah 3",
+    "Christian leadership"
+  ],
+  "og_image": "/assets/og/follow-the-money.png",
+  "og_image_alt": "Follow the Money: When money determines what can be said, it has begun exercising authority over the mission. TheWrkShop, Leadership & Culture.",
+  "scriptures": [
+    {
+      "ref": "Micah 3:11",
+      "text": "Her leaders judge for a bribe, her priests teach for a price, and her prophets tell fortunes for money. Yet they look for the LORD’s support and say, “Is not the LORD among us? No disaster will come upon us.”"
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Micah confronts leaders who distort justice, priests who teach for payment, and prophets who give favorable messages for money."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yet these leaders claim the Lord is among them."
+        },
+        {
+          "type": "paragraph",
+          "text": "Micah exposes a disturbing contradiction."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "The people entrusted with justice distort it.",
+            "Those entrusted with spiritual instruction let money shape their service.",
+            "Those expected to speak truth are swayed by payment."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "And all the while, they invoke God’s presence."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE LANGUAGE OF FAITHFULNESS REMAINS WHILE THE INCENTIVES UNDERNEATH IT HAVE CHANGED."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is not a condemnation of fair pay."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scripture says those who serve may be supported by their work (1 Timothy 5:18)."
+        },
+        {
+          "type": "paragraph",
+          "text": "The issue is what happens when money decides what is taught, concealed, approved, or condemned."
+        },
+        {
+          "type": "paragraph",
+          "text": "When financial interest begins controlling moral judgment, the mission is in danger."
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“AS LONG AS THE MISSION BENEFITS, THE COMPROMISE IS JUSTIFIED.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Imagine a church that depends heavily on one influential donor."
+        },
+        {
+          "type": "paragraph",
+          "text": "A serious concern arises involving that person’s conduct."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leadership now faces two questions."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "What is right?",
+            "And what might happen financially if we act?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Both questions may matter for planning."
+        },
+        {
+          "type": "paragraph",
+          "text": "But only one should determine whether wrongdoing is addressed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Or imagine a business whose largest client expects treatment that contradicts the company’s stated values."
+        },
+        {
+          "type": "paragraph",
+          "text": "The temptation becomes familiar."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "We can’t afford to lose them.",
+            "Not now.",
+            "Not with everything depending on this relationship."
+          ]
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "FINANCIAL DEPENDENCE CAN QUIETLY BECOME MORAL DEPENDENCE."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The battle rarely begins with someone announcing, “Money matters more than truth.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "It begins with anxiety."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "What if funding disappears?",
+            "What if attendance declines?",
+            "What if influential people leave?",
+            "What if we can’t sustain what we’ve built?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then anxiety becomes interpretation."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "We start calling compromise wisdom.",
+            "Avoidance becomes patience.",
+            "Silence becomes strategic restraint."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually we stop asking what faithfulness requires and start asking what we can afford to say."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE MESSAGE CHANGES BEFORE ANYONE ADMITS THE MISSION HAS CHANGED."
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "RESOURCES SHOULD SERVE THE MISSION. THE MISSION MUST NOT BECOME CAPTIVE TO ITS RESOURCES."
+        },
+        {
+          "type": "paragraph",
+          "text": "Money is necessary for many kinds of work."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Budgets matter.",
+            "Sustainability matters.",
+            "Wise stewardship matters."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But biblical stewardship also requires integrity."
+        },
+        {
+          "type": "paragraph",
+          "text": "A healthy institution recognizes the financial dependencies that could compromise its judgment."
+        },
+        {
+          "type": "paragraph",
+          "text": "That may require diversified funding, transparent governance, conflict-of-interest safeguards, and leaders who are willing to lose support rather than conceal wrongdoing."
+        },
+        {
+          "type": "paragraph",
+          "text": "The question is not whether money affects decisions. It always affects what is possible."
+        },
+        {
+          "type": "paragraph",
+          "text": "The question is whether it controls what we are willing to call right."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "Whose money, approval, or attendance are we afraid to lose?",
+            "How might that fear be shaping what we say?",
+            "Do influential contributors receive different accountability?",
+            "What truths become difficult to say when revenue is threatened?",
+            "Would our judgment be the same if the person involved contributed nothing financially?",
+            "Who has gained influence over our convictions without ever being formally given authority?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Identify one financial relationship that creates disproportionate pressure."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Examine its influence.",
+            "Establish safeguards before a crisis.",
+            "Invite independent accountability."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "And refuse to treat financial security as permission to compromise truth."
+        },
+        {
+          "type": "paragraph",
+          "text": "The same battle can happen in a man’s own life: whose paycheck, approval, or opinion has started deciding what you’re willing to say?"
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "When money determines what can be said, it has begun exercising authority over the mission."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, thank You for every resource You provide. Keep us grateful without becoming dependent on human approval. Expose where financial fear is shaping our convictions. Give us wisdom, integrity, and courage to steward resources without surrendering truth. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "Financial dependence can quietly become moral dependence."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "The message can change before anyone admits the mission has changed."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Resources should serve the mission, not govern its conscience."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Who has gained influence over our convictions without being given authority?"
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-11_micah-3-11_follow-the-money|"
+}

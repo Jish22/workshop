@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-26",
+  "title": "Give Thanks",
+  "subtitle": "A Prayer for the Table",
+  "tagline": "One prayer for the meal, and one question to ask before the plates are passed.",
+  "headline": "A Prayer for the Table",
+  "headline_sub": "Happy Thanksgiving",
+  "slug": "a-prayer-for-the-table",
+  "series": "Give Thanks",
+  "seo_title": "A Thanksgiving Prayer for the Table",
+  "seo_description": "A short Thanksgiving prayer for men to pray over the meal with family and friends, and one question to ask around the table before the plates are passed.",
+  "keywords": [
+    "Thanksgiving prayer",
+    "Thanksgiving table prayer",
+    "prayer before meal",
+    "Psalm 107:1",
+    "gratitude",
+    "Christian men"
+  ],
+  "og_image": "/assets/og/a-prayer-for-the-table.png",
+  "og_image_alt": "A Prayer for the Table: One prayer for the meal, and one question to ask before the plates are passed. TheWrkShop.",
+  "scriptures": [
+    {
+      "ref": "Psalm 107:1",
+      "text": "Give thanks to the LORD, for he is good; his love endures forever."
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "Today",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No long study today."
+        },
+        {
+          "type": "paragraph",
+          "text": "Just a prayer you can pray over the table, and one question to ask before the plates are passed."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "A Prayer for the Table",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, thank You for this food, this table, and the people around it."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Thank You for the ones who came before us,",
+            "and the faith they passed down.",
+            "Thank You for what You carried us through this year,",
+            "and for what You’re still carrying us through.",
+            "Make us grateful for what we have,",
+            "generous with what we’ve been given,",
+            "and mindful of anyone without a seat at a table today."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Remind us that every good gift comes from You."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "one_question",
+      "label": "One Question for the Table",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "“What’s one thing God did for you this year?”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Go first. Your family will follow your lead."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "Give thanks to the LORD, for he is good; his love endures forever."
+        },
+        {
+          "type": "paragraph",
+          "text": "Happy Thanksgiving from all of us at TheWrkShop."
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-26_psalm-107-1_a-prayer-for-the-table|"
+}

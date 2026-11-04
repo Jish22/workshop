@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-19",
+  "title": "Give Thanks",
+  "subtitle": "What Was Passed to You?",
+  "tagline": "Before measuring what you have accomplished, remember what you were given.",
+  "headline": "What Was Passed to You?",
+  "headline_sub": "Gratitude Begins With Remembering",
+  "slug": "what-was-passed-to-you",
+  "series": "Give Thanks",
+  "seo_title": "What Was Passed to You? Gratitude Begins With Remembering",
+  "seo_description": "Timothy’s faith lived first in his grandmother Lois and his mother Eunice. A Thanksgiving devotional for men on remembering the people and grace that shaped you.",
+  "keywords": [
+    "gratitude",
+    "Thanksgiving devotional for men",
+    "faith passed down",
+    "remembering God's faithfulness",
+    "2 Timothy 1:5",
+    "Psalm 78"
+  ],
+  "og_image": "/assets/og/what-was-passed-to-you.png",
+  "og_image_alt": "What Was Passed to You?: Before measuring what you have accomplished, remember what you were given. TheWrkShop.",
+  "scriptures": [
+    {
+      "ref": "2 Timothy 1:5",
+      "text": "I am reminded of your sincere faith, which first lived in your grandmother Lois and in your mother Eunice and, I am persuaded, now lives in you also."
+    },
+    {
+      "ref": "Psalm 78:4",
+      "text": "We will not hide them from their descendants; we will tell the next generation the praiseworthy deeds of the LORD, his power, and the wonders he has done."
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Paul reminds Timothy where his faith came from."
+        },
+        {
+          "type": "paragraph",
+          "text": "Not from a program. Not from a platform."
+        },
+        {
+          "type": "paragraph",
+          "text": "From two women with names. His grandmother Lois. His mother Eunice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Their faith lived in them first. Now it lived in him."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before asking what you will leave behind, consider what you received."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Who prayed for you?",
+            "Who encouraged you?",
+            "Who corrected you when you were drifting?",
+            "Who believed in you before you believed in yourself?",
+            "Who introduced you to Scripture?",
+            "Who showed faithfulness when life became difficult?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Some of those people may never know the impact they made."
+        },
+        {
+          "type": "paragraph",
+          "text": "Others may no longer be alive."
+        },
+        {
+          "type": "paragraph",
+          "text": "But their influence remains."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "SOME OF THE MOST IMPORTANT THINGS WE CARRY WERE PLACED IN OUR LIVES BY PEOPLE WHO EXPECTED NOTHING IN RETURN."
+        },
+        {
+          "type": "paragraph",
+          "text": "Psalm 78 calls God’s people to remember and to tell."
+        },
+        {
+          "type": "paragraph",
+          "text": "Remembering is not merely looking backward."
+        },
+        {
+          "type": "paragraph",
+          "text": "It helps us see the faithfulness of God across generations."
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“I DON’T OWE ANYONE FOR WHO I’VE BECOME.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Certainly, your decisions mattered."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Your discipline mattered.",
+            "Your sacrifices mattered."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But nobody develops entirely alone."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Someone taught you.",
+            "Someone opened a door.",
+            "Someone showed patience.",
+            "Someone gave you a chance.",
+            "Someone gave you wisdom."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "And above every human contribution stands the grace of God."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "PRIDE REMEMBERS PERSONAL EFFORT WHILE OVERLOOKING RECEIVED MERCY."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Why do we forget?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Because familiarity makes gifts feel ordinary."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "What once amazed us becomes expected.",
+            "What once felt undeserved begins to feel earned."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually we can enjoy blessings without remembering their source."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "MUCH OF WHAT WE NOW CALL NORMAL WAS ONCE SOMETHING WE HOPED AND PRAYED FOR."
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "REMEMBERING GOD’S FAITHFULNESS REORDERS OUR PERSPECTIVE."
+        },
+        {
+          "type": "paragraph",
+          "text": "Not every inheritance was good."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some men received pain, neglect, or destructive patterns."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gratitude does not require calling evil good."
+        },
+        {
+          "type": "paragraph",
+          "text": "But even within a difficult history, we can ask where grace appeared, who offered help, and what God has provided."
+        },
+        {
+          "type": "paragraph",
+          "text": "We can honor what was good without denying what was harmful."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "Who helped shape the man I am today?",
+            "What opportunity did I receive that I could never have created alone?",
+            "Whose sacrifice made my path easier?",
+            "What blessing have I begun treating as something I’m owed?",
+            "Who deserves a thank-you they have never received?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Write down three people whose influence shaped your life."
+        },
+        {
+          "type": "paragraph",
+          "text": "Next to each name, write what they gave you."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thank them if you can. A text, a call, a note."
+        },
+        {
+          "type": "paragraph",
+          "text": "If they are no longer living, thank God for them."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then ask how you might pass that gift forward."
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "Before measuring what you have accomplished, remember what you were given."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, thank You for every person You used to shape my life. Forgive me where pride has caused me to overlook what they gave. Help me remember with humility, receive with gratitude, and pass forward what was good. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "Before asking what you will leave, remember what you received."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Some of the greatest gifts we carry came through people who expected nothing in return."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Pride remembers effort while overlooking mercy."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Gratitude remembers what entitlement forgets."
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-19_2-timothy-1-5_what-was-passed-to-you|"
+}

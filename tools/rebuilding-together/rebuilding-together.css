@@ -1,0 +1,98 @@
+/* Rebuilding Together. Builds on /patterns/patterns.css (same palette, type and tool styles as the site's other tools). */
+.rt-verse { margin: 1rem 0; padding: 0 0 0 1rem; border-left: 3px solid var(--gold); }
+.rt-verse p { font-family: 'Playfair Display', serif; font-size: 1.08rem; line-height: 1.55; margin: 0 0 0.25rem; }
+.rt-verse cite { font-family: 'Space Mono', monospace; font-style: normal; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember); }
+.pt-hero .rt-verse p { color: var(--white); font-size: clamp(1.1rem, 2.6vw, 1.35rem); }
+.pt-hero .rt-verse cite { color: var(--gold); }
+.pt-h3[tabindex]:focus, .rt-wt:focus { outline: none; }
+.rt-big { font-family: 'Playfair Display', serif; font-size: 1.15rem; line-height: 1.6; margin: 0.4rem 0 0.8rem; }
+.rt-sect { font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember); margin: 1.4rem 0 0.4rem; }
+.rt-rules { padding-left: 1.1rem; } .rt-rules li { margin: 0.45rem 0; }
+.rt-arc { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; margin: 1rem 0; font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.rt-arc span { padding: 0.35rem 0.55rem; border: 1px solid var(--line); background: var(--white); }
+.rt-arc i { font-style: normal; color: var(--steel); }
+.rt-arc span:nth-child(1) { color: #6b7f8c; } .rt-arc span:nth-child(9) { color: var(--ember); }
+.rt-arc-on span.is-here { background: var(--ember); color: #fff !important; border-color: var(--ember); }
+.rt-keep { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.92rem; margin: 1.2rem 0 0; cursor: pointer; }
+.rt-keep input { accent-color: var(--ember); width: 18px; height: 18px; flex: none; margin-top: 0.2rem; }
+
+.rt-q { border-top: 1px solid var(--line); padding: 0.9rem 0 0.3rem; }
+.rt-q p { margin: 0; }
+.rt-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.55rem 0 0.4rem; }
+.rt-chips button { font: inherit; font-size: 0.92rem; padding: 0.5rem 0.9rem; border: 1px solid #b9b0a3; background: var(--white); color: var(--ink); border-radius: 999px; cursor: pointer; min-height: 40px; text-align: left; }
+.rt-chips button[aria-pressed="true"] { background: var(--ash); color: var(--white); border-color: var(--ash); }
+.rt-stop { border: 2px solid var(--ember); background: var(--white); padding: 1rem 1.2rem; margin: 1rem 0; }
+.rt-stop h3 { margin: 0 0 0.4rem; color: var(--ember); }
+.rt-stop ul { padding-left: 1.1rem; }
+.rt-warn { background: #f8ece6; border-left: 3px solid var(--ember); padding: 0.7rem 0.9rem; margin: 0.6rem 0 0.3rem; }
+.rt-warn p { margin: 0; }
+.rt-warn.rt-ok { background: var(--bone); border-left-color: var(--gold); }
+
+.rt-top { display: flex; justify-content: space-between; align-items: baseline; }
+.rt-map { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; margin: 0.6rem 0 1rem; }
+.rt-map button { font: inherit; font-family: 'Space Mono', monospace; font-size: 0.78rem; height: 2.3rem; border: 1px solid #b9b0a3; background: var(--white); color: var(--ink); cursor: pointer; padding: 0; position: relative; }
+.rt-map .rt-p0 { border-top: 3px solid #6b7f8c; } .rt-map .rt-p1 { border-top: 3px solid var(--gold); } .rt-map .rt-p2 { border-top: 3px solid var(--ember); }
+.rt-map button.is-done { background: var(--bone); }
+.rt-map button.is-done::after { content: '✓'; position: absolute; right: 2px; top: 0; font-size: 0.6rem; color: #4f6b3a; }
+.rt-map button.is-current { font-weight: 700; }
+.rt-map button[aria-selected="true"] { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.rt-phase { border: 1px solid var(--line); border-left: 4px solid #6b7f8c; background: var(--bone); padding: 0.8rem 1rem; margin: 0 0 1rem; }
+.rt-phase.rt-p1 { border-left-color: var(--gold); } .rt-phase.rt-p2 { border-left-color: var(--ember); }
+.rt-phase strong { font-family: 'Playfair Display', serif; font-size: 1.15rem; display: block; margin: 0.15rem 0; }
+.rt-phase p { margin: 0.2rem 0; }
+.rt-phase summary { cursor: pointer; font-weight: 600; margin-top: 0.4rem; }
+.rt-phase ul { padding-left: 1.1rem; margin: 0.4rem 0 0; }
+
+.rt-week { margin: 0.4rem 0 0; }
+.rt-num { font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember); }
+.rt-wt { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 1.9rem); line-height: 1.2; margin: 0.2rem 0 0; }
+.rt-theme { font-style: italic; color: var(--steel); margin: 0.2rem 0 0.8rem; }
+.rt-box { background: var(--bone); border-left: 3px solid var(--gold); padding: 0.8rem 1rem; margin: 1rem 0; }
+.rt-pray { font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.6; margin: 0.3rem 0 0; }
+.rt-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.rt-two > div { border: 1px solid var(--line); padding: 0.8rem 0.9rem; background: var(--white); }
+.rt-two p { margin: 0.3rem 0 0; font-size: 0.95rem; }
+@media (max-width: 560px) { .rt-two { grid-template-columns: 1fr; } }
+.rt-list { list-style: none; padding: 0 !important; margin: 0.3rem 0 0 !important; }
+.rt-list li { border-bottom: 1px solid var(--line); margin: 0 !important; }
+.rt-list label { display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.6rem 0.2rem; cursor: pointer; }
+.rt-list input { accent-color: var(--ember); width: 20px; height: 20px; flex: none; margin-top: 0.1rem; }
+.rt-list input:checked + span { color: var(--steel); }
+.rt-micro { padding-left: 1.1rem; } .rt-micro li { margin: 0.35rem 0; }
+.rt-mind { background: var(--bone); padding: 0.6rem 0.8rem; }
+.rt-done { border: 2px solid var(--ink); padding: 0.8rem 1rem; margin: 1.5rem 0 0; }
+.rt-done label { display: flex; gap: 0.6rem; align-items: center; font-weight: 600; cursor: pointer; }
+.rt-done input { accent-color: var(--ember); width: 20px; height: 20px; }
+.rt-done p { margin: 0.3rem 0 0; }
+.rt-lines { display: none; }
+
+.rt-group { margin-top: 2.5rem; }
+.rt-group ul, .rt-group ol { padding-left: 1.2rem; }
+.rt-group li { margin: 0.3rem 0; }
+.rt-format { list-style: none; padding: 0 !important; margin: 0.5rem 0 1rem !important; }
+.rt-format li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.75rem; padding: 0.55rem 0; border-bottom: 1px solid var(--parchment); margin: 0 !important; }
+.rt-format strong { font-family: 'Space Mono', monospace; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--ember); }
+
+.rt-share { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0 0 1.25rem; }
+.rt-share span { font-weight: 700; margin-right: 0.25rem; }
+.rt-share a, .rt-share button { font: inherit; font-size: 0.9rem; color: var(--ink) !important; background: var(--white); border: 1px solid rgba(62,44,35,.25); border-radius: 999px; padding: 0.35rem 0.8rem; cursor: pointer; text-decoration: none; }
+.rt-share a:hover, .rt-share button:hover { background: var(--parchment); }
+
+.rt-print-brand, .rt-print-rights { display: none; }
+@media print {
+  .rt-print-brand { display: flex !important; align-items: center; justify-content: space-between; border-bottom: 2px solid #3e2c23; padding-bottom: .5rem; margin-bottom: 1rem; }
+  .rt-print-brand img { height: 44px; width: auto; }
+  .rt-print-brand span { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: .08em; }
+  .rt-print-rights { display: block !important; font-size: .75rem; color: #555; border-top: 1px solid #999; margin-top: 1.5rem; padding-top: .5rem; }
+  .pt-tool { padding: 0; }
+  .rt-share, .pt-actions, .pt-crumbs, #site-header, footer, .rt-map, .rt-done, .rt-keep { display: none !important; }
+  .rt-group, .pt-note, .pt-hero .pt-lead, .pt-hero .rt-verse { display: none !important; }
+  .rt-printall .rt-week { break-before: page; }
+  .rt-printall .rt-phase { break-before: page; break-after: avoid; }
+  .rt-printall .rt-phase + .rt-week, .rt-printall h2 + .rt-phase { break-before: auto; }
+  .rt-box, .rt-two, .rt-phase, .rt-verse, .rt-list li { break-inside: avoid; }
+  .rt-box, .rt-phase, .rt-mind { background: #fff !important; }
+  .rt-phase details > ul { display: block; }
+  .pt-field textarea { border-color: #999; min-height: 3.5rem; }
+  .rt-lines { display: block; border-bottom: 1px solid #b9b0a3; height: 1.9rem; }
+}

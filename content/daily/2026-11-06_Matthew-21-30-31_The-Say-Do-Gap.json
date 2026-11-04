@@ -1,0 +1,330 @@
+{
+  "date": "2026-11-06",
+  "title": "The Battle Before The Battle",
+  "subtitle": "The Say-Do Gap",
+  "tagline": "The real test of a value is what happens when practicing it costs something.",
+  "headline": "The Say-Do Gap",
+  "headline_sub": "When Everyone Knows the Language but Few Live It",
+  "slug": "the-say-do-gap",
+  "series": "The Battle Before the Battle",
+  "category": "Leadership & Culture",
+  "seo_title": "The Say-Do Gap: When Values Aren’t Lived",
+  "seo_description": "Agreement is not obedience. Jesus’ parable of the two sons and what it reveals about the gap between the values leaders talk about and the ones they live.",
+  "keywords": [
+    "say-do gap",
+    "company values not lived",
+    "walk the talk",
+    "leadership hypocrisy",
+    "integrity",
+    "Christian leadership"
+  ],
+  "og_image": "/assets/og/the-say-do-gap.png",
+  "og_image_alt": "The Say-Do Gap: The real test of a value is what happens when practicing it costs something. TheWrkShop, Leadership & Culture.",
+  "scriptures": [
+    {
+      "ref": "Matthew 21:30-31",
+      "text": "Then the father went to the other son and said the same thing. He answered, ‘I will, sir,’ but he did not go. “Which of the two did what his father wanted?” “The first,” they answered."
+    },
+    {
+      "ref": "Titus 1:16",
+      "text": "They claim to know God, but by their actions they deny him."
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jesus tells of two sons. One refuses his father’s instruction but later obeys. The other agrees to go but never follows through."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jesus asks which son did the father’s will."
+        },
+        {
+          "type": "paragraph",
+          "text": "The answer seems obvious."
+        },
+        {
+          "type": "paragraph",
+          "text": "The son who actually obeyed."
+        },
+        {
+          "type": "paragraph",
+          "text": "But Jesus is exposing something deeper than poor follow-through."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "AGREEMENT IS NOT OBEDIENCE."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "One son said the wrong thing and ultimately did the right thing.",
+            "The other said the right thing and failed to act."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The difference wasn’t vocabulary."
+        },
+        {
+          "type": "paragraph",
+          "text": "It was response."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now imagine that distinction applied to an entire organization."
+        },
+        {
+          "type": "paragraph",
+          "text": "Everyone knows the values."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Integrity.",
+            "Humility.",
+            "Transparency.",
+            "Service.",
+            "Accountability."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "People repeat them in meetings, presentations, and leadership training."
+        },
+        {
+          "type": "paragraph",
+          "text": "But what happens when practicing those values becomes costly?"
+        },
+        {
+          "type": "paragraph",
+          "text": "That’s when the organization’s real commitments become visible."
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“BECAUSE WE SAY THE RIGHT THINGS, WE MUST BE LIVING THE RIGHT WAY.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Imagine a company that publicly celebrates transparency."
+        },
+        {
+          "type": "paragraph",
+          "text": "But when leadership makes a significant mistake, employees are discouraged from asking questions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Transparency is valued until transparency becomes uncomfortable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Or imagine a church that teaches humility."
+        },
+        {
+          "type": "paragraph",
+          "text": "But when a respected leader receives correction, the concern is dismissed because of the leader’s reputation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Humility is praised until humility requires admitting error."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE STATED VALUE AND THE OPERATING VALUE ARE NO LONGER THE SAME."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Why does this happen?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Because language is easier than surrender."
+        },
+        {
+          "type": "paragraph",
+          "text": "Words can create the appearance of maturity without demanding its cost."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "We learn which values receive approval.",
+            "We learn how to sound aligned.",
+            "We learn what the room rewards."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually we may begin mistaking our ability to explain truth for our willingness to obey it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Titus 1:16 describes people whose actions contradict their claim to know God."
+        },
+        {
+          "type": "paragraph",
+          "text": "That is a sobering warning."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "KNOWING THE LANGUAGE OF TRANSFORMATION CAN BECOME A SUBSTITUTE FOR SUBMITTING TO IT."
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE WILLINGNESS TO OBEY MATTERS MORE THAN THE ABILITY TO SOUND OBEDIENT."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here’s what closing the gap looks like."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Acts 6, Greek-speaking widows were being overlooked in the daily food distribution."
+        },
+        {
+          "type": "paragraph",
+          "text": "The apostles didn’t deliver another message about loving people."
+        },
+        {
+          "type": "paragraph",
+          "text": "They changed how the care was delivered."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "The problem was acknowledged.",
+            "Responsibility was assigned.",
+            "The need was met."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sometimes the strongest evidence that a value matters is that we change how we operate because of it."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "Which of our values would be hardest to prove by watching what we actually do?",
+            "What happens when honesty threatens reputation?",
+            "What happens when fairness disadvantages someone influential?",
+            "Do we reward people who embody our values, or those who simply promote them?",
+            "Where have we mistaken a statement of commitment for actual obedience?",
+            "If nobody could hear our speeches, what would our behavior teach them?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose one value your organization, or your family, repeats often."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Define what it looks like in observable behavior.",
+            "Identify where practice contradicts the claim.",
+            "Invite honest feedback."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then make one change that brings conduct into alignment."
+        },
+        {
+          "type": "paragraph",
+          "text": "Don’t simply improve the statement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Live it."
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "The real test of a value is what happens when practicing it costs something."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, expose the distance between what I say and what I do. Forgive me where I have mistaken agreement for obedience. Let truth shape my decisions, relationships, and leadership. May our actions make visible the convictions we profess. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "Agreement is not obedience."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "The real test of a value is what happens when practicing it costs something."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "A culture can learn the language of transformation without experiencing transformation."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "If nobody heard our speeches, what would our behavior teach?"
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-06_matthew-21-30-31_the-say-do-gap|"
+}

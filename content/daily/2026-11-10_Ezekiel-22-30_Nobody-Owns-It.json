@@ -1,0 +1,314 @@
+{
+  "date": "2026-11-10",
+  "title": "The Battle Before The Battle",
+  "subtitle": "Nobody Owns It",
+  "tagline": "A problem can be visible to everyone and still belong to no one.",
+  "headline": "Nobody Owns It",
+  "headline_sub": "When a Problem Belongs to No One",
+  "slug": "nobody-owns-it",
+  "series": "The Battle Before the Battle",
+  "category": "Leadership & Culture",
+  "seo_title": "Nobody Owns It: When a Problem Belongs to No One",
+  "seo_description": "Everyone sees the problem. No one takes the next step. A biblical look at ownership, accountability gaps and why concerns get lost between handoffs at work and church.",
+  "keywords": [
+    "lack of ownership",
+    "diffusion of responsibility",
+    "accountability",
+    "bystander effect at work",
+    "Ezekiel 22:30",
+    "Christian leadership"
+  ],
+  "og_image": "/assets/og/nobody-owns-it.png",
+  "og_image_alt": "Nobody Owns It: A problem can be visible to everyone and still belong to no one. TheWrkShop, Leadership & Culture.",
+  "scriptures": [
+    {
+      "ref": "Ezekiel 22:30",
+      "text": "I looked for someone among them who would build up the wall and stand before me in the gap on behalf of the land so I would not have to destroy it, but I found no one."
+    },
+    {
+      "ref": "Genesis 4:9",
+      "text": "Then the LORD said to Cain, “Where is your brother Abel?” “I don’t know,” he replied. “Am I my brother’s keeper?”"
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "God declares through Ezekiel that He looked for someone to stand in the gap on behalf of the land, but found no one."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Genesis, Cain answers God’s question about Abel with a revealing question of his own: “Am I my brother’s keeper?”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Different stories. The same question underneath them both:"
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "WHAT HAPPENS WHEN RESPONSIBILITY IS RECOGNIZED BUT REFUSED?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cain’s question tries to place his brother outside his concern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezekiel’s picture reveals a community in desperate need of someone willing to stand against its corruption."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now bring that question into organizational life."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "A problem is known.",
+            "Several people discuss it.",
+            "Reports document it.",
+            "Committees review it."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Yet nothing changes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Everyone recognizes the issue."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nobody accepts responsibility for the next faithful action."
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“IF IT ISN’T MY ASSIGNMENT, IT ISN’T MY RESPONSIBILITY.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Imagine someone raising a serious concern inside a ministry."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "One leader refers the person to another.",
+            "That leader forwards an email.",
+            "A committee acknowledges receipt.",
+            "Eventually the person stops asking."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The organization can document every handoff."
+        },
+        {
+          "type": "paragraph",
+          "text": "But can it document actual care?"
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "A CONCERN CAN TRAVEL THROUGH AN ENTIRE ORGANIZATION WITHOUT ANYONE TAKING RESPONSIBILITY FOR IT."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Why does responsibility disappear?"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Fear of making a mistake.",
+            "Fear of conflict.",
+            "Fear of offending someone powerful.",
+            "Unclear authority.",
+            "Overwhelming workloads.",
+            "The assumption that someone else will act."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sometimes the problem isn’t indifference."
+        },
+        {
+          "type": "paragraph",
+          "text": "It’s a structure that makes responsibility hard to identify."
+        },
+        {
+          "type": "paragraph",
+          "text": "But sometimes we prefer ambiguity because clarity would require action."
+        },
+        {
+          "type": "paragraph",
+          "text": "That’s the upstream question:"
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "AM I GENUINELY UNABLE TO ACT, OR RELIEVED THAT NOBODY HAS CLEARLY ASKED ME TO?"
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "RESPONSIBILITY MUST BE MATCHED WITH AUTHORITY, WISDOM, AND FOLLOW-THROUGH."
+        },
+        {
+          "type": "paragraph",
+          "text": "Not everyone can solve every problem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some situations require specialized expertise, safeguarding procedures, or independent investigation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Faithful responsibility does not mean acting beyond our competence."
+        },
+        {
+          "type": "paragraph",
+          "text": "It means refusing to use our limitations as an excuse for indifference."
+        },
+        {
+          "type": "paragraph",
+          "text": "We can:"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "listen,",
+            "document accurately,",
+            "escalate appropriately,",
+            "make sure someone qualified receives the concern,",
+            "follow up,",
+            "and avoid making promises we cannot keep."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "A healthy organization does not expect everyone to do everything."
+        },
+        {
+          "type": "paragraph",
+          "text": "It makes clear who must do what."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "Where does responsibility disappear between departments, leaders, or ministries?",
+            "Which problems are repeatedly discussed but rarely resolved?",
+            "Who owns the next step when a concern crosses organizational boundaries?",
+            "Can someone identify who is accountable for follow-through?",
+            "What happens when the responsible person lacks enough authority?",
+            "Who is still waiting because everyone assumed someone else would act?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose one recurring unresolved problem."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Identify the responsible person or team.",
+            "Clarify authority.",
+            "Establish a response process.",
+            "Create a way to verify follow-through."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then ask whether the people affected actually received help."
+        },
+        {
+          "type": "paragraph",
+          "text": "And look closer to home: what problem in your house has everyone noticed and nobody owned? Own the next step."
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "A problem can be visible to everyone and still belong to no one."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, expose where I have avoided responsibility through fear, convenience, or indifference. Give me wisdom to recognize my role and humility to involve others when necessary. Teach us to build systems where concerns receive attention and people are not abandoned between handoffs. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "Awareness is not the same as responsibility."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "A handoff is not necessarily a resolution."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Ambiguity can become a hiding place for avoidance."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Responsibility becomes credible when someone follows through."
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-10_ezekiel-22-30_nobody-owns-it|"
+}

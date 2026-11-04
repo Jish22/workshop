@@ -988,8 +988,15 @@ async function main() {
 
   const entries = await readDailyEntries();
   const today = todayCentralISO();
+  // On the staging preview, build upcoming dailies (up to 31 days ahead) so a queued series can be
+  // reviewed page by page before release. The "today" daily (homepage, daily.json) stays the real
+  // today. Production (thewrkshop.com) still only shows dailies dated today or earlier.
+  const isStagingPreview = process.env.CONTEXT === 'branch-deploy' && process.env.BRANCH === 'staging';
+  const buildUntil = isStagingPreview
+    ? new Date(new Date(today + 'T12:00:00Z').getTime() + 31 * 864e5).toISOString().slice(0, 10)
+    : today;
 
-  const { visible, future, older } = partitionEntries(entries, today);
+  const { visible, future, older } = partitionEntries(entries, buildUntil);
 
   // Netlify uses the first matching rule, so moves and guards go before the passthroughs
   await mergeRedirectLines(guardAndMoveLines(visible, older, future));
@@ -997,7 +1004,7 @@ async function main() {
 
   await rebuildDailyOutputDir();
   await writeArchiveJson(visible);
-  await writeLatestDailyJson(visible);
+  await writeLatestDailyJson(visible.filter(e => e.date <= today));
   await buildDailyPages(visible);
   const shareCount = await buildSharePages(visible);
   const leadershipCount = await buildLeadershipHub(visible);

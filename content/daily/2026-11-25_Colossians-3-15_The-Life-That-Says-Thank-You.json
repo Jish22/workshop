@@ -1,0 +1,333 @@
+{
+  "date": "2026-11-25",
+  "title": "Give Thanks",
+  "subtitle": "The Life That Says Thank You",
+  "tagline": "What we do with what we’ve received is the loudest thank-you we’ll ever say.",
+  "headline": "The Life That Says Thank You",
+  "headline_sub": "When Gratitude Becomes a Way of Living",
+  "slug": "the-life-that-says-thank-you",
+  "series": "Give Thanks",
+  "seo_title": "The Life That Says Thank You: Colossians 3:17",
+  "seo_description": "Whatever you do, give thanks. A Thanksgiving Eve devotional for men on gratitude as a way of living, and telling what God has done at your Thanksgiving table.",
+  "keywords": [
+    "gratitude as a lifestyle",
+    "Colossians 3:17",
+    "Thanksgiving devotional for men",
+    "Thanksgiving table",
+    "thankfulness",
+    "Christian living"
+  ],
+  "og_image": "/assets/og/the-life-that-says-thank-you.png",
+  "og_image_alt": "The Life That Says Thank You: What we do with what we’ve received is the loudest thank-you we’ll ever say. TheWrkShop.",
+  "scriptures": [
+    {
+      "ref": "Colossians 3:15",
+      "text": "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful."
+    },
+    {
+      "ref": "Colossians 3:17",
+      "text": "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him."
+    }
+  ],
+  "sections": [
+    {
+      "key": "the_revelation",
+      "label": "The Revelation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Paul does something remarkable."
+        },
+        {
+          "type": "paragraph",
+          "text": "He doesn’t isolate thanksgiving as a single activity."
+        },
+        {
+          "type": "paragraph",
+          "text": "He connects it with:"
+        },
+        {
+          "type": "lines",
+          "items": [
+            "peace,",
+            "the Word,",
+            "worship,",
+            "relationships,",
+            "speech,",
+            "action."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "And finally:"
+        },
+        {
+          "type": "quote",
+          "text": "Whatever you do. Give thanks."
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "GRATITUDE IS NOT MERELY SOMETHING WE EXPRESS. IT CAN BECOME HOW WE LIVE."
+        },
+        {
+          "type": "paragraph",
+          "text": "That changes Thanksgiving."
+        },
+        {
+          "type": "paragraph",
+          "text": "Instead of one day when we count blessings, gratitude becomes a posture that shapes everyday decisions."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "How we speak.",
+            "How we lead.",
+            "How we treat people.",
+            "How we respond to disappointment.",
+            "How we steward what we’ve received."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_lie",
+      "label": "The Lie",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“GRATITUDE IS SOMETHING I FEEL WHEN LIFE IS GOING WELL.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "Feelings matter."
+        },
+        {
+          "type": "paragraph",
+          "text": "But feelings fluctuate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some mornings we wake up encouraged."
+        },
+        {
+          "type": "paragraph",
+          "text": "Other mornings we wake up burdened."
+        },
+        {
+          "type": "paragraph",
+          "text": "If gratitude depends entirely on how we feel, it will disappear whenever life gets hard."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paul points to something deeper."
+        },
+        {
+          "type": "paragraph",
+          "text": "A life increasingly shaped by Christ."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Not constant cheerfulness.",
+            "Not denial of grief.",
+            "Not forced optimism."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But a growing recognition that everything we do belongs under His lordship."
+        }
+      ]
+    },
+    {
+      "key": "the_upstream_battle",
+      "label": "The Upstream Battle",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Consider this movement:"
+        },
+        {
+          "type": "flow",
+          "steps": [
+            "Attention",
+            "Interpretation",
+            "Belief",
+            "Desire",
+            "Decisions",
+            "Habits",
+            "Character"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Now imagine gratitude entering that process."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "We become more attentive to grace.",
+            "We notice gifts we used to overlook.",
+            "We remember God’s faithfulness.",
+            "We become less entitled.",
+            "More generous.",
+            "More patient.",
+            "More willing to serve."
+          ]
+        },
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "GRATITUDE TURNS OUR EYES TOWARD GOD’S GOODNESS. AND WHAT WE BEHOLD, WE BECOME."
+        },
+        {
+          "type": "paragraph",
+          "text": "As we behold Christ, the Spirit keeps doing His transforming work (2 Corinthians 3:18)."
+        }
+      ]
+    },
+    {
+      "key": "the_truth",
+      "label": "The Truth",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "THE GOAL IS NOT SIMPLY TO BECOME MORE GRATEFUL PEOPLE. IT IS TO BECOME PEOPLE WHO LIVE MORE FAITHFULLY BEFORE CHRIST."
+        },
+        {
+          "type": "paragraph",
+          "text": "Colossians 3 places thanksgiving inside a bigger picture of the Christian life."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Christ’s peace.",
+            "Christ’s Word.",
+            "Teaching one another.",
+            "Worship.",
+            "Action done in His name."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gratitude is not the center."
+        },
+        {
+          "type": "paragraph",
+          "text": "Christ is."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thanksgiving is one expression of a life increasingly aligned with Him."
+        }
+      ]
+    },
+    {
+      "key": "the_audit",
+      "label": "The Audit",
+      "blocks": [
+        {
+          "type": "bullet_list",
+          "items": [
+            "What has God entrusted to me?",
+            "What have I stopped noticing?",
+            "Where have I let entitlement grow?",
+            "What blessing can I pass forward?",
+            "Who needs to hear my appreciation?",
+            "What would change if gratitude shaped my leadership, relationships, and decisions?",
+            "Does my life merely contain moments of thanksgiving, or is it becoming an expression of thanksgiving?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "the_surrender",
+      "label": "The Surrender",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Before tomorrow’s celebration, take time to remember."
+        },
+        {
+          "type": "lines",
+          "items": [
+            "Name what you’ve received.",
+            "Acknowledge what remains difficult.",
+            "Thank those who helped you.",
+            "Give something to someone else.",
+            "And offer your life to Christ again."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Not because gratitude earns His love."
+        },
+        {
+          "type": "paragraph",
+          "text": "Because His grace invites a faithful response."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then tomorrow at the table, tell one story of what God did for you this year."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your kids are listening. That’s Psalm 78 at your Thanksgiving table."
+        }
+      ]
+    },
+    {
+      "key": "take_it_with_you",
+      "label": "Take It With You",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "What we do with what we’ve received is the loudest thank-you we’ll ever say."
+        }
+      ]
+    },
+    {
+      "key": "the_prayer",
+      "label": "The Prayer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Father, thank You for Your faithfulness. Thank You for the people, opportunities, provision, and grace You have given me. Forgive my entitlement and inattention. Teach me to receive with humility, remember with gratitude, give with generosity, and live in obedience to Christ. May my life increasingly say thank You. In Jesus’ name, Amen."
+        }
+      ]
+    },
+    {
+      "key": "hidden_gems",
+      "label": "Hidden Gems 💎",
+      "blocks": [
+        {
+          "type": "callout",
+          "prefix": "👉",
+          "text": "What we do with what we’ve received is the loudest thank-you we’ll ever say."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Gratitude can become a way of living, not merely a moment of expression."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Attention to grace can weaken the grip of entitlement."
+        },
+        {
+          "type": "callout",
+          "prefix": "💎",
+          "text": "Gratitude is not the center. Christ is."
+        },
+        {
+          "type": "paragraph",
+          "text": "—TheWrkShop"
+        }
+      ]
+    }
+  ],
+  "__insert_block_header": "2026-11-25_colossians-3-15_the-life-that-says-thank-you|"
+}

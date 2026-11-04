@@ -176,9 +176,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       document.querySelectorAll(".sitename").forEach(el => (el.textContent = siteName));
       rebindNavToggle();
+      showGiveIfLive();
     });
   }
 });
+
+// --------- Give button ----------
+// The build writes /data/giving.json: live only on the staging preview, or on the live site
+// from the launch date set in scripts/shared/seasonal.js (GIVE_LAUNCH).
+async function showGiveIfLive() {
+  try {
+    const res = await fetch('/data/giving.json', { cache: 'no-store' });
+    if (!res.ok) return;
+    const { live } = await res.json();
+    if (live) document.querySelectorAll('.nav-give').forEach(el => { el.hidden = false; });
+  } catch {}
+}
 
 // --------- Daily Feature loader ----------
 // Cut long text at a word boundary so cards never end mid-word (matches scripts/build-home.js)

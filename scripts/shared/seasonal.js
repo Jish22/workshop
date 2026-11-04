@@ -18,10 +18,17 @@ const addDays = (iso, n) => {
   return d.toISOString().slice(0, 10);
 };
 
+// Give page + header Give button: hidden on the live site until GIVE_LAUNCH (YYYY-MM-DD, Central),
+// then stays up. Leave '' to keep it off the live site. The staging preview always shows it.
+export const GIVE_LAUNCH = '';
+
 // Easter page: Palm Sunday through two weeks after Easter.
 export const SEASONAL_PAGES = [
-  { file: 'Easter.html', path: '/Easter.html', window: (year) => { const e = easterDate(year); return [addDays(e, -7), addDays(e, 14)]; } }
+  { file: 'Easter.html', path: '/Easter.html', window: (year) => { const e = easterDate(year); return [addDays(e, -7), addDays(e, 14)]; } },
+  { file: 'give.html', path: '/give.html', previewOnStaging: true, window: () => [GIVE_LAUNCH || '9999-12-31', '9999-12-31'] }
 ];
+
+export const isStagingPreview = () => process.env.CONTEXT === 'branch-deploy' && process.env.BRANCH === 'staging';
 
 // todayIso = YYYY-MM-DD in Central time.
 export function isInSeason(page, todayIso) {

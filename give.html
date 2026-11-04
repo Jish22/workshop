@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Give | TheWrkShop</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <link rel="stylesheet" href="/patterns/patterns.css"/>
+  <link rel="stylesheet" href="/give.css?v=1"/>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico?v=2">
+  <meta name="description" content="Help keep The Daily, the groups and every TheWrkShop resource free for the men who need them."/>
+  <link rel="canonical" href="https://thewrkshop.com/give.html"/>
+  <meta property="og:site_name" content="TheWrkShop"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Give to TheWrkShop"/>
+  <meta property="og:description" content="Help keep The Daily, the groups and every TheWrkShop resource free for the men who need them."/>
+  <meta property="og:url" content="https://thewrkshop.com/give.html"/>
+  <meta property="og:image" content="https://thewrkshop.com/assets/images/thewrkshop-logo.png"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N48478JV2Z"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N48478JV2Z',{page_location:location.origin+location.pathname});</script>
+</head>
+<body class="pt-page gv-page">
+  <div id="site-header"></div>
+  <main>
+    <section class="pt-hero">
+      <div class="pt-narrow">
+        <span class="pt-eyebrow">Give</span>
+        <h1 class="pt-h1">Keep the work <em>free.</em></h1>
+        <p class="pt-lead">The Daily, the groups and every tool on this site cost nothing to the men who use them. Your gift keeps it that way, and helps reach the next man who's ready.</p>
+      </div>
+    </section>
+
+    <section class="pt-section">
+      <div class="pt-narrow gv-layout">
+        <form class="gv-card" id="giveForm" novalidate>
+          <div class="gv-toggle" role="radiogroup" aria-label="How often">
+            <label><input type="radio" name="freq" value="once" checked><span>One time</span></label>
+            <label><input type="radio" name="freq" value="monthly"><span>Monthly</span></label>
+          </div>
+
+          <fieldset class="gv-amounts">
+            <legend class="pt-sr">Amount</legend>
+            <label><input type="radio" name="amount" value="25"><span>$25</span></label>
+            <label><input type="radio" name="amount" value="50" checked><span>$50</span></label>
+            <label><input type="radio" name="amount" value="100"><span>$100</span></label>
+            <label><input type="radio" name="amount" value="other"><span>Other</span></label>
+          </fieldset>
+
+          <p class="gv-impact" id="gvImpact" aria-live="polite"></p>
+
+          <button type="submit" class="pt-btn pt-btn--ember gv-submit" id="gvSubmit">Give $50</button>
+          <p class="pt-small pt-muted gv-secure">Secure checkout. You'll be taken to our payment page to finish.</p>
+          <p class="gv-preview-msg" id="gvPreviewMsg" hidden>Preview only: giving isn't connected yet, so no payment was taken.</p>
+        </form>
+
+        <div class="gv-why">
+          <h2 class="pt-h2">Where it goes</h2>
+          <ul class="gv-list">
+            <li><strong>The Daily.</strong> Texts and emails every weekday morning to men who are building a rhythm with God.</li>
+            <li><strong>Groups.</strong> Online groups and one-on-one intake conversations, so no man walks alone.</li>
+            <li><strong>Free resources.</strong> Reflection tools, studies and printables that churches and leaders can use with any group.</li>
+          </ul>
+          <div class="pt-callout">
+            <p><strong>Other ways to give</strong></p>
+            <p>Pray for the men in this work. Forward The Daily to one man who needs it. Or <a href="/get-known.html">join a group</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="pt-narrow">
+        <p class="pt-note">TheWrkShop is a ministry, not a registered 501(c)(3) nonprofit, so gifts are not tax-deductible. Questions about giving? <a href="/#contact">Contact us</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <nav class="footer-links" aria-label="Browse">
+        <a href="/upstream/">Start Here</a>
+        <a href="/daily.html">The Daily</a>
+        <a href="/leadership/">Leadership</a>
+        <a href="/get-known.html">Groups</a>
+        <a href="/library/">Library</a>
+        <a href="/blog-archive.html">Blog</a>
+        <a href="/podcasts.html">Podcast</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/#contact">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+      <div class="footer-logo"><img src="/assets/images/thewrkshop-logo-transparent-trimmed.png" alt="TheWrkShop" width="233" height="180" loading="lazy"></div>
+      <p>&copy; 2026 <span class="sitename"></span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+  (function () {
+    // Payment links go here once a giving account is set up (e.g. Stripe Payment Links).
+    // Leave empty to keep the page in preview mode: the button shows a note and takes no payment.
+    const LINKS = { once: '', monthly: '' };
+
+    const form = document.getElementById('giveForm');
+    const btn = document.getElementById('gvSubmit');
+    const impact = document.getElementById('gvImpact');
+    const msg = document.getElementById('gvPreviewMsg');
+    const IMPACT = {
+      '25': 'Helps send The Daily to men every weekday morning.',
+      '50': 'Helps keep the groups and intake conversations going.',
+      '100': 'Helps build the next free resource for men and churches.',
+      'other': 'Every gift, any size, keeps the work free.'
+    };
+
+    function update() {
+      const freq = form.freq.value;
+      const amt = form.amount.value;
+      const label = amt === 'other' ? 'Give' : `Give $${amt}`;
+      btn.textContent = freq === 'monthly' ? `${label}${amt === 'other' ? ' monthly' : ' / month'}` : label;
+      impact.textContent = IMPACT[amt] || '';
+      msg.hidden = true;
+    }
+    form.addEventListener('change', update);
+    update();
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const link = LINKS[form.freq.value];
+      if (!link) { msg.hidden = false; return; }
+      if (window.gtag) gtag('event', 'give_click', { frequency: form.freq.value, amount: form.amount.value });
+      window.location.href = link;
+    });
+  })();
+  </script>
+</body>
+</html>

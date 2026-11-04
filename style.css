@@ -935,3 +935,12 @@ a.cta:hover, a.cta:focus-visible, .df-cta:hover, .df-cta:focus-visible { text-de
 .next-steps { max-width: 760px; margin: 2rem auto 1rem; padding: 0 1rem; }
 .next-steps-title { color:#3e2c23; font-size: clamp(1.25rem, 2.2vw, 1.6rem); margin: 0 0 .75rem; text-align:center; }
 .next-steps-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+
+/* Header "Give" button (shown only once giving is live; see scripts/shared/seasonal.js) */
+.navbar .nav-links li.nav-give a.give-btn {
+  background: #c4501a; color: #fff; padding: .35rem .95rem; border-radius: 999px; font-weight: 700;
+}
+.navbar .nav-links li.nav-give a.give-btn:hover { background: #d4b49c; color: #3e2c23; }
+@media (max-width: 768px) {
+  .nav-links li.nav-give a.give-btn { display: inline-block; margin-top: .25rem; }
+}

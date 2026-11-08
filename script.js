@@ -29,6 +29,84 @@ async function injectHTML(selector, url) {
   }
 }
 
+// Shared destinations keep the header, breadcrumbs, and footer consistent.
+const siteSections = {
+  devotionals: { label: 'Devotionals', href: '/daily-archive.html' },
+  podcasts: { label: 'Podcasts', href: '/podcasts.html' },
+  tools: { label: 'Tools', href: '/resources.html' },
+  studies: { label: 'Studies', href: '/studies/' },
+  groups: { label: 'Groups', href: '/get-known.html' },
+  leadership: { label: 'Leadership', href: '/leadership/' },
+  blog: { label: 'Blog', href: '/blog-archive.html' },
+  library: { label: 'Browse Everything', href: '/library/' },
+  start: { label: 'Start Here', href: '/upstream/' }
+};
+function sectionForPath(path) {
+  if (/^\/(daily(?:[/.]|-archive\.html))/.test(path)) return 'devotionals';
+  if (path === '/podcasts.html') return 'podcasts';
+  if (/^\/(resources(?:[/.])|tools\/|patterns\/|prayer\/|belief\/|one-verse-man\/|after-the-amen\/|assessment\.html|infographics\/|sub-pages\/resources\/)/.test(path)) return 'tools';
+  if (path.startsWith('/studies/')) return 'studies';
+  if (['/get-known.html', '/request-membership.html'].includes(path)) return 'groups';
+  if (path.startsWith('/leadership/')) return 'leadership';
+  if (path.startsWith('/blog/') || path === '/blog-archive.html') return 'blog';
+  if (path.startsWith('/library/')) return 'library';
+  if (path.startsWith('/upstream/')) return 'start';
+  return null;
+}
+function enhanceSiteNavigation() {
+  const key = sectionForPath(location.pathname);
+  const section = siteSections[key];
+  document.querySelectorAll('#site-header [data-section]').forEach(link => {
+    if (link.dataset.section === key) {
+      link.setAttribute('aria-current', location.pathname === section.href ? 'page' : 'location');
+      link.closest('details')?.classList.add('has-current-section');
+    }
+  });
+  const more = document.getElementById('nav-more');
+  document.addEventListener('click', event => {
+    if (more && !more.contains(event.target)) more.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && more?.open) {
+      more.open = false;
+      more.querySelector('summary').focus();
+    }
+  });
+  // Use text nodes for page titles so content can never become injected markup.
+  if (section && !document.querySelector('.site-breadcrumbs')) {
+    const nav = document.createElement('nav');
+    nav.className = 'site-breadcrumbs';
+    nav.setAttribute('aria-label', 'Breadcrumb');
+    const list = document.createElement('ol');
+    const add = (label, href) => {
+      const item = document.createElement('li');
+      const node = document.createElement(href ? 'a' : 'span');
+      node.textContent = label;
+      if (href) node.href = href;
+      else node.setAttribute('aria-current', 'page');
+      item.append(node); list.append(item);
+    };
+    add('Home', '/');
+    const isHub = location.pathname === section.href || location.pathname === section.href + 'index.html';
+    add(section.label, isHub ? null : section.href);
+    if (!isHub) add(document.querySelector('h1')?.textContent.trim() || document.title.split('|')[0].trim(), null);
+    nav.append(list);
+    document.getElementById('site-header')?.after(nav);
+  }
+  const footer = document.querySelector('footer .footer-links');
+  if (footer) {
+    footer.replaceChildren();
+    const destinations = [...Object.values(siteSections),
+      {label:'Our Story', href:'/#about'}, {label:'Contact', href:'/#contact'}, {label:'Privacy', href:'/privacy/'}];
+    destinations.forEach(destination => {
+      const link = document.createElement('a');
+      link.href = destination.href; link.textContent = destination.label;
+      if (destination.href === section?.href) link.setAttribute('aria-current', 'location');
+      footer.append(link);
+    });
+  }
+}
+
 // --------- DOM Ready ----------
 document.addEventListener("DOMContentLoaded", function () {
   // Hamburger menu rebinder
@@ -45,11 +123,28 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburger.setAttribute('aria-expanded', String(willOpen));
       };
 
+      // Let keyboard users dismiss the expanded navigation.
+      hamburger.onkeydown = (event) => {
+        if (event.key === 'Escape') {
+          navLinks.classList.remove('show');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      };
+      navLinks.onkeydown = (event) => {
+        if (event.key === 'Escape') {
+          navLinks.classList.remove('show');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.focus();
+        }
+      };
+
       // optional: close when a nav link is tapped
       navLinks.addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
           navLinks.classList.remove('show');
           hamburger.setAttribute('aria-expanded', 'false');
+          const more = document.getElementById('nav-more');
+          if (more) more.open = false;
         }
       });
     }
@@ -176,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       document.querySelectorAll(".sitename").forEach(el => (el.textContent = siteName));
       rebindNavToggle();
+      enhanceSiteNavigation();
     });
   }
 });
@@ -477,16 +573,16 @@ function chunkText(text, max = 160) {
   return chunks;
 }
 
-// ---- Listen player: one shared player with Start / Pause / Rewind / Forward ----
+// ---- Read-aloud player: one play/pause control with optional sentence navigation ----
 const tts = {
   chunks: [], idx: 0, playing: false, session: 0,
-  voiceName: null, targetSelector: null, button: null, idleLabel: '🔊 Listen',
+  voiceName: null, targetSelector: null, button: null, idleLabel: '▶ Read aloud',
   bars: []
 };
 
 // Read only the devotional text (skip buttons, badges, the control bar, nav links).
 function ttsTextFrom(el) {
-  const skip = el.querySelectorAll('.tts-controls, button, .badge, .nav-archive, .df-actions, time');
+  const skip = el.querySelectorAll('.tts-controls, .daily-listen, .daily-meta, .daily-series, .daily-audio, .share-row, .daily-series-note, button, .badge, .nav-archive, .df-actions, time');
   const prev = [];
   skip.forEach(n => { prev.push(n.style.display); n.style.display = 'none'; });
   const raw = el.innerText || '';
@@ -505,17 +601,17 @@ function ttsUpdateUI() {
   const total = tts.chunks.length;
   const pos = total ? Math.min(tts.idx + 1, total) : 0;
   if (tts.button) {
-    tts.button.textContent = tts.playing ? '🔊 Listening…'
-      : (total && tts.idx > 0 && tts.idx < total ? '⏸️ Paused — tap to resume' : tts.idleLabel);
+    tts.button.textContent = tts.playing ? 'Ⅱ Pause reading'
+      : (total ? '▶ Resume reading' : tts.idleLabel);
+    tts.button.setAttribute('aria-pressed', String(tts.playing));
   }
   const staging = location.hostname.startsWith('staging--');
   tts.bars.forEach(bar => {
-    bar.querySelector('[data-tts="start"]').disabled = tts.playing;
-    bar.querySelector('[data-tts="pause"]').disabled = !tts.playing;
+    bar.hidden = !total;
     bar.querySelector('[data-tts="back"]').disabled = !total || tts.idx === 0;
     bar.querySelector('[data-tts="fwd"]').disabled = !total || tts.idx >= total - 1;
     const status = bar.querySelector('.tts-status');
-    status.textContent = total ? `${pos} / ${total}` : '';
+    status.textContent = total ? `Passage ${pos} of ${total}` : '';
     if (staging && tts.voiceName) status.textContent += ` · ${tts.voiceName}`;
   });
 }
@@ -523,7 +619,7 @@ function ttsUpdateUI() {
 function ttsSpeakCurrent(session) {
   if (session !== tts.session) return;
   if (tts.idx >= tts.chunks.length) {           // finished
-    tts.playing = false; tts.idx = 0; ttsUpdateUI(); return;
+    tts.playing = false; tts.idx = 0; tts.chunks = []; ttsUpdateUI(); return;
   }
   const utter = new SpeechSynthesisUtterance(tts.chunks[tts.idx]);
   const voice = ttsCurrentVoice();
@@ -601,17 +697,14 @@ function ttsStep(delta) {
 function ttsBuildBar(anchor) {
   const bar = document.createElement('div');
   bar.className = 'tts-controls';
+  bar.hidden = true;
   bar.setAttribute('role', 'group');
   bar.setAttribute('aria-label', 'Audio controls');
   bar.innerHTML = `
-    <button type="button" class="tts-btn" data-tts="back" aria-label="Rewind one sentence">⏪ Rewind</button>
-    <button type="button" class="tts-btn" data-tts="start" aria-label="Start">▶ Start</button>
-    <button type="button" class="tts-btn" data-tts="pause" aria-label="Pause">⏸ Pause</button>
-    <button type="button" class="tts-btn" data-tts="fwd" aria-label="Fast forward one sentence">⏩ Forward</button>
+    <button type="button" class="tts-btn" data-tts="back" aria-label="Previous passage">← Back</button>
+    <button type="button" class="tts-btn" data-tts="fwd" aria-label="Next passage">Forward →</button>
     <span class="tts-status" aria-live="polite"></span>`;
   anchor.insertAdjacentElement('afterend', bar);
-  bar.querySelector('[data-tts="start"]').addEventListener('click', ttsStart);
-  bar.querySelector('[data-tts="pause"]').addEventListener('click', ttsPause);
   bar.querySelector('[data-tts="back"]').addEventListener('click', () => ttsStep(-1));
   bar.querySelector('[data-tts="fwd"]').addEventListener('click', () => ttsStep(1));
   tts.bars.push(bar);
@@ -619,14 +712,19 @@ function ttsBuildBar(anchor) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const setups = [
-    { id: 'listenDailyBtn', target: '.daily-article, .daily-feature', idle: '🔊 Listen' },
+    { id: 'listenDailyBtn', target: '.daily-article, .daily-feature', idle: '▶ Read aloud' },
     { id: 'listenHomeBtn',  target: '.daily-feature', idle: '🔊 Listen to Today’s Devotional' }
   ];
 
   setups.forEach(({ id, target, idle }) => {
     const btn = document.getElementById(id);
     if (!btn) return;
-    // Put the control bar just under the row that holds the Listen button
+    if (!('speechSynthesis' in window)) {
+      btn.closest('.daily-listen')?.setAttribute('hidden', '');
+      btn.hidden = true;
+      return;
+    }
+    // Keep secondary controls hidden until a reading has been loaded.
     ttsBuildBar(btn.parentElement);
     const choose = () => {
       if (tts.button !== btn) {        // switching which devotional is being read

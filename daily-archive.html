@@ -97,16 +97,23 @@
   <!-- Google Analytics (same GA4 property as the homepage's Firebase analytics) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N48478JV2Z"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N48478JV2Z');</script>
+<link rel="stylesheet" href="/assets/browse.css">
 </head>
-<body>
+<body class="devotional-browse">
   <div id="site-header"></div>
 
   <section class="page-hero">
-    <h1>Daily Archive</h1>
-    <p>Find previous devotionals by date, title, or scripture.</p>
+    <p class="browse-eyebrow">The Daily</p><h1>Devotionals for everyday life.</h1>
+    <p>Start with today’s reading, or find a reflection for what you’re facing.</p>
   </section>
 
-  <section class="toolbar">
+  <section class="latest-reading browse-container" aria-labelledby="latest-reading-title">
+    <div><p class="browse-eyebrow">Latest devotional</p><h2 id="latest-reading-title">A moment in Scripture. A step forward.</h2><p id="latest-reading-description">One Scripture, one honest question, and one faithful step.</p><a class="button-primary" id="latest-reading-link" href="/daily.html">Read the latest devotional →</a></div>
+    <a class="browse-library-link" href="#devotional-library">Browse all devotionals ↓</a>
+  </section>
+  <div class="browse-container library-heading" id="devotional-library"><h2>All devotionals</h2><p>Find a reading by topic, title, or Scripture.</p></div>
+  <section class="toolbar browse-container" aria-label="Filter devotionals">
+    <select id="topicSel" class="select" aria-label="Filter by topic"><option value="all">All topics</option></select>
     <select id="yearSel" class="select" aria-label="Filter by year"></select>
     <select id="monthSel" class="select" aria-label="Filter by month">
       <option value="all">All Months</option>
@@ -123,7 +130,7 @@
       <option value="11">November</option>
       <option value="12">December</option>
     </select>
-    <input id="archSearch" class="search-input" type="search" placeholder="Search… (title, verse)"/>
+    <input aria-label="Search devotionals by title or Scripture" id="archSearch" class="search-input" type="search" placeholder="Search… (title, verse)"/>
   </section>
 
   <div class="results-count" id="resultsCount" aria-live="polite"></div>
@@ -164,6 +171,7 @@
 
     (function(){
       const grid = document.getElementById('archiveGrid');
+      const topicSel = document.getElementById('topicSel');
       const yrSel = document.getElementById('yearSel');
       const moSel = document.getElementById('monthSel');
       const search = document.getElementById('archSearch');
@@ -197,15 +205,16 @@
         const dt = new Date(o.date + 'T00:00:00');
         const human = dt.toLocaleDateString(undefined,{month:'short', day:'numeric', year:'numeric'});
 
-        a.innerHTML = `
-          <div class="ac-head">
-            <span class="badge">Insight</span>
-            <time class="ac-date" datetime="${o.date}">${human}</time>
-          </div>
-          <h3 class="ac-title">${o.title || 'Untitled'}</h3>
-          ${o.subtitle ? `<p class="ac-subtitle">${o.subtitle}</p>` : ''}
-          <p class="ac-verse">${o.verse || ''}</p>
-        `;
+        const meta = document.createElement('p');
+        meta.className = 'ac-meta';
+        meta.textContent = [o.category, o.verse].filter(Boolean).join(' · ');
+        const title = document.createElement('h3');
+        title.className = 'ac-title'; title.textContent = o.title || 'Untitled';
+        const date = document.createElement('time');
+        date.className = 'ac-date'; date.dateTime = o.date; date.textContent = human;
+        a.append(meta, title);
+        if (o.subtitle) { const sub = document.createElement('p'); sub.className = 'ac-subtitle'; sub.textContent = o.subtitle; a.append(sub); }
+        a.append(date);
         return a;
       }
 
@@ -229,6 +238,7 @@
         const q = (search.value || '').trim().toLowerCase();
 
         let filtered = all.slice();
+        if (topicSel.value !== 'all') filtered = filtered.filter(e => e.category === topicSel.value);
 
         if (y !== 'all') filtered = filtered.filter(e => (e.date || '').startsWith(y));
         if (m !== 'all') filtered = filtered.filter(e => (e.date || '').slice(5,7) === m);
@@ -257,7 +267,7 @@
         chunk.forEach(o => grid.appendChild(objToCard(o)));
 
         empty.style.display = chunk.length ? 'none' : '';
-        countEl.textContent = `${view.length} entr${view.length === 1 ? 'y' : 'ies'}`;
+        countEl.textContent = view.length ? `Showing ${start + 1}–${Math.min(start + PAGE, view.length)} of ${view.length} devotionals` : 'No matching devotionals';
 
         prevBtn.disabled = page === 0;
         nextBtn.disabled = start + PAGE >= view.length;
@@ -277,6 +287,7 @@
         }
       });
 
+      topicSel.addEventListener('change', apply);
       yrSel.addEventListener('change', apply);
       moSel.addEventListener('change', apply);
       search.addEventListener('input', apply);
@@ -294,13 +305,23 @@
           all = list
             .map(x => ({
               date: x.date,
-              title: x.title || '',
-              subtitle: x.subtitle || '',
+              title: x.headline || x.subtitle || x.title || '',
+              category: x.category || 'Daily Formation',
+              subtitle: x.headline ? (x.tagline || '') : '',
               verse: x.verse_ref || '',
               href: (x.href && x.href.startsWith('/')) ? x.href : ('/' + (x.href || '').replace(/^\/+/, ''))
             }))
             .filter(x => x.date && x.date <= today);
 
+          [...new Set(all.map(e => e.category))].sort().forEach(topic => {
+            const option = document.createElement('option'); option.value = topic; option.textContent = topic; topicSel.append(option);
+          });
+          const latest = [...all].sort((a,b) => b.date.localeCompare(a.date))[0];
+          if (latest) {
+            document.getElementById('latest-reading-title').textContent = latest.title;
+            document.getElementById('latest-reading-description').textContent = latest.subtitle || latest.verse;
+            document.getElementById('latest-reading-link').href = latest.href;
+          }
           populateYearOptions();
           apply();
         } catch(e) {

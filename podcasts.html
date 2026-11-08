@@ -20,22 +20,7 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="stylesheet" href="/style.css"/>
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico?v=2">
-  <style>
-    /* Page-specific light styles (lean on your global CSS) */
-    .podcast-hero{padding:3rem 1rem;text-align:center}
-    .podcast-hero h1{margin:0 0 .5rem}
-    .podcast-hero p{color:#6b5b53;margin:0}
-    .podcast-list{max-width:960px;margin:2rem auto;padding:0 1rem}
-    .pod-card{border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:1rem;margin-bottom:1rem;background:#faf8f6}
-    .pod-card h3{margin:.25rem 0 .35rem;font-size:1.1rem}
-    .pod-card .meta{color:#6b5b53;font-size:.9rem;margin-bottom:.5rem}
-    .pod-card .excerpt{margin:.5rem 0 1rem}
-    .pod-card .actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
-    .pod-card .cta{display:inline-block;border:1px solid rgba(62,44,35,.35);padding:.45rem .7rem;border-radius:10px;text-decoration:none;color:#3e2c23}
-    .pod-empty{max-width:720px;margin:2rem auto;padding:1rem;text-align:center;color:#6b5b53}
-    .pod-spinner{width:28px;height:28px;border-radius:50%;border:3px solid rgba(0,0,0,.1);border-top-color:#3e2c23;animation:spin 1s linear infinite;margin:1rem auto}
-    @keyframes spin{to{transform:rotate(360deg)}}
-  </style>
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,25 +50,29 @@
   <!-- Google Analytics (same GA4 property as the homepage's Firebase analytics) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N48478JV2Z"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N48478JV2Z');</script>
+<link rel="stylesheet" href="/assets/browse.css">
 </head>
-<body>
+<body class="podcasts-page">
+  <a class="skip-link" href="/podcasts.html#podcast-main">Skip to episodes</a>
 
   <!-- Injected header -->
   <div id="site-header"></div>
 
-  <main>
+  <main id="podcast-main">
     <section class="podcast-hero container">
-      <h1>Our Podcast</h1>
+      <p class="podcast-eyebrow">TheWrkShop Podcast</p>
+      <h1>Podcasts</h1>
       <p>Conversations that build faith, character, and excellence.</p>
+      <a class="pod-archive-link" href="/podcasts.html#all-episodes">Browse all episodes ↓</a>
     </section>
 
     <section class="podcast-list container" id="podcastSection" aria-label="Podcast Episodes">
-      <div id="podcastLoading" class="pod-empty">
+      <div id="podcastLoading" class="pod-empty" role="status">
         <div class="pod-spinner" aria-hidden="true"></div>
         <div>Loading episodes…</div>
       </div>
       <div id="podcastList" hidden></div>
-      <div id="podcastEmpty" class="pod-empty" hidden>No episodes found yet. Check back soon.</div>
+      <div id="podcastEmpty" class="pod-empty" role="status" hidden>No episodes found yet. Check back soon.</div>
     </section>
   </main>
 
@@ -122,13 +111,22 @@
       if (isNaN(d)) return '';
       return d.toLocaleDateString(undefined,{month:'short', day:'numeric', year:'numeric'});
     }
+    const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+    function safeUrl(value) {
+      if (!value) return '';
+      try {
+        const url = new URL(value, location.origin);
+        return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+      } catch { return ''; }
+    }
     function strip(html){ return (html||'').replace(/<[^>]+>/g,'').trim(); }
 
     try {
       const r = await fetch('/data/podcast-archive.json?ts=' + Date.now(), { cache: 'no-store' });
       if (!r.ok) throw new Error('Archive fetch failed');
       const list = await r.json();
-      const items = (Array.isArray(list) ? list : []).slice(0, 20);
+      if (!Array.isArray(list)) throw new Error('Invalid podcast archive');
+      const items = list.slice().sort((a,b) => new Date(b.pub_date) - new Date(a.pub_date));
 
       if (loading) loading.hidden = true;
 
@@ -137,32 +135,44 @@
         return;
       }
 
-      wrap.innerHTML = items.map(ep => {
+      wrap.innerHTML = items.map((ep, index) => {
         const title = ep.title || 'Untitled Episode';
         const date  = fmtDate(ep.pub_date);
-        const dur   = ep.duration ? ` • ${ep.duration}` : '';
-        const page  = ep.page_url || ep.audio_url || '#';
+        const dur   = ep.duration ? ` • ${escape(ep.duration)}` : '';
+        const page  = escape(safeUrl(ep.page_url) || safeUrl(ep.audio_url) || '/podcasts.html');
         const desc  = strip(ep.description_html || '').slice(0, 180);
-        const audio = ep.audio_url ? `<audio controls preload="none" src="${ep.audio_url}" style="width:100%;max-width:520px"></audio>` : '';
+        const audio = ep.audio_url ? `<audio controls preload="none" aria-label="Listen to ${escape(title)}" src="${escape(safeUrl(ep.audio_url))}"></audio>` : '';
 
         return `
-          <article class="pod-card">
-            <h3><a href="${page}" target="_blank" rel="noopener">${title}</a></h3>
+          ${index === 0 ? '<p class="browse-eyebrow">Latest episode</p>' : ''}
+          <article class="pod-card ${index === 0 ? 'pod-featured' : ''}">
+            <h2><a href="${page}">${escape(title)}</a></h2>
             <p class="meta">${date}${dur}</p>
-            ${desc ? `<p class="excerpt">${desc}…</p>` : ''}
+            ${desc ? `<p class="excerpt">${escape(desc)}${strip(ep.description_html).length > 180 ? '…' : ''}</p>` : ''}
             <div class="actions">
-              <a class="cta" href="${page}" target="_blank" rel="noopener">Play →</a>
+              <a class="cta" href="${page}">Episode details →</a>
               ${audio}
             </div>
           </article>
+          ${index === 0 ? `<div class="pod-library-heading" id="all-episodes"><h2>All episodes</h2><p>${items.length} ${items.length === 1 ? 'episode' : 'episodes'} · Newest first</p></div>` : ''}
         `;
       }).join('');
 
+      const latestCard = wrap.querySelector('.pod-featured');
+      if (latestCard) {
+        const row = document.createElement('a'); row.className = 'pod-archive-row';
+        row.href = safeUrl(items[0].page_url) || safeUrl(items[0].audio_url) || '/podcasts.html';
+        row.textContent = `${items[0].title || 'Untitled Episode'} · ${items[0].duration || fmtDate(items[0].pub_date)} →`;
+        document.getElementById('all-episodes').after(row);
+      }
       wrap.hidden = false;
     } catch (err) {
       console.error('Podcast hydrate error:', err);
       if (loading) loading.hidden = true;
-      if (emptyBox) emptyBox.hidden = false;
+      if (emptyBox) {
+        emptyBox.textContent = 'We couldn’t load episodes. Please refresh to try again.';
+        emptyBox.hidden = false;
+      }
     }
   })();
   </script>

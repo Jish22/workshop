@@ -80,10 +80,12 @@ ${blog.map(e => `        <li><a href="${esc(e.href)}">${esc(e.title || 'Untitled
     months.get(key).push(e);
   }
   const dailyHtml = [...months.entries()].map(([key, list]) => `
-      <h3>${esc(monthLabel(key + '-01'))}</h3>
+      <details class="lib-month" name="devotional-months">
+      <summary><h3>${esc(monthLabel(key + '-01'))}</h3><span class="lib-count">${list.length} readings</span></summary>
+      <div class="lib-month-content">
       <ul class="lib-list">
 ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><span class="lib-note">${esc(shortDate(e.date))}${e.verse_ref ? ` · ${esc(e.verse_ref)}` : ''}</span></li>`).join('\n')}
-      </ul>`).join('\n');
+      </ul></div></details>`).join('\n');
 
   const all = [
     ...leadership.map(e => ({ url: SITE_URL + e.href, name: dailyName(e) })),
@@ -140,6 +142,30 @@ ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><s
     .lib-list a:hover { text-decoration:underline; }
     .lib-note { display:block; color:#6b5b53; font-size:.88rem; }
     .lib-more { color:#3e2c23; font-weight:700; }
+    /* Native accordions remain usable with a keyboard and without JavaScript. */
+    .page-hero { background:var(--wash); color:var(--ink); padding:56px 24px; }
+    .lib-jump a { background:transparent; color:var(--ink); border-color:var(--line); border-radius:4px; font-size:13px; }
+    .lib-section { background:var(--paper); border:1px solid var(--line); border-radius:6px; box-shadow:none; padding:0; scroll-margin-top:110px; }
+    .lib-section > summary, .lib-month > summary { display:flex; align-items:center; gap:16px; cursor:pointer; padding:24px; list-style:none; }
+    .lib-section > summary::-webkit-details-marker, .lib-month > summary::-webkit-details-marker { display:none; }
+    .lib-section > summary::after, .lib-month > summary::after { content:'+'; margin-left:auto; color:var(--ink); font-size:24px; font-weight:400; }
+    .lib-section[open] > summary::after, .lib-month[open] > summary::after { content:'−'; }
+    .lib-section > summary:hover, .lib-month > summary:hover { background:var(--wash); }
+    .lib-section > summary:focus-visible, .lib-month > summary:focus-visible { outline:3px solid #b47737; outline-offset:3px; }
+    .lib-section > summary h2 { font-size:23px; margin:0; color:var(--ink); }
+    .lib-count { font-size:12px; color:var(--muted); white-space:nowrap; }
+    .lib-section-content { padding:0 24px 24px; border-top:1px solid var(--line); }
+    .lib-section-content > p { margin-top:20px; }
+    .lib-month { border-bottom:1px solid var(--line); }
+    .lib-month > summary { padding:18px 0; }
+    .lib-month > summary h3 { margin:0; text-transform:none; letter-spacing:0; font-size:17px; color:var(--ink); }
+    .lib-month > summary::after { font-size:20px; }
+    .lib-month-content { padding-bottom:12px; }
+    .lib-list li { padding:14px 0; }
+    .lib-list a, .lib-more { color:var(--ink); }
+    .lib-note { color:var(--muted); margin-top:4px; }
+    @media(max-width:480px) { .lib-section > summary { flex-wrap:wrap; gap:10px; padding:20px; } .lib-section > summary h2 { font-size:20px; } .lib-section-content { padding:0 20px 20px; } }
+    @media print { .lib-jump { display:none; } .lib-section { break-inside:auto; } }
   </style>
   <!-- Google Analytics (same GA4 property as the homepage's Firebase analytics) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N48478JV2Z"></script>
@@ -149,8 +175,8 @@ ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><s
   <div id="site-header"></div>
 
   <section class="page-hero">
-    <h1>The Library</h1>
-    <p>Every devotional, leadership lesson and article in one place.</p>
+    <h1>Browse Everything</h1>
+    <p>Choose a section to explore. Open a month to browse its devotionals.</p>
   </section>
 
   <main class="lib-wrap">
@@ -160,22 +186,28 @@ ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><s
       <a href="#daily">Daily Devotionals</a>
     </nav>
 
-    <section class="lib-section" id="leadership">
-      <h2>Leadership &amp; Culture</h2>
+    <details class="lib-section" id="leadership" name="library-sections">
+      <summary><h2>Leadership &amp; Culture</h2><span class="lib-count">${leadership.length} posts</span></summary>
+      <div class="lib-section-content">
       ${leadershipHtml}
-    </section>
+      </div>
+    </details>
 
-    <section class="lib-section" id="blog">
-      <h2>Blog</h2>
+    <details class="lib-section" id="blog" name="library-sections">
+      <summary><h2>Blog</h2><span class="lib-count">${blog.length} posts</span></summary>
+      <div class="lib-section-content">
       ${blogHtml}
       <p><a class="lib-more" href="/blog-archive.html">Blog archive →</a></p>
-    </section>
+      </div>
+    </details>
 
-    <section class="lib-section" id="daily">
-      <h2>Daily Devotionals</h2>
+    <details class="lib-section" id="daily" name="library-sections">
+      <summary><h2>Daily Devotionals</h2><span class="lib-count">${daily.length} readings</span></summary>
+      <div class="lib-section-content">
       ${dailyHtml || '<p>Coming soon.</p>'}
       <p><a class="lib-more" href="/daily-archive.html">Search the Daily archive →</a></p>
-    </section>
+      </div>
+    </details>
   </main>
 
   <footer>
@@ -198,6 +230,17 @@ ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><s
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+    function openLibrarySection(hash) {
+      const section = document.getElementById(hash.slice(1));
+      if (section?.matches('details.lib-section')) section.open = true;
+    }
+    document.querySelectorAll('.lib-jump a').forEach(link => {
+      link.addEventListener('click', () => openLibrarySection(link.hash));
+    });
+    window.addEventListener('hashchange', () => openLibrarySection(location.hash));
+    openLibrarySection(location.hash);
+  </script>
 </body>
 </html>
 `;

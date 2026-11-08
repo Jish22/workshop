@@ -1,0 +1,122 @@
+/* Calm browsing surfaces: a clear starting point, then a searchable library. */
+.browse-container { max-width:1120px; padding-left:28px; padding-right:28px; margin-left:auto; margin-right:auto; }
+.browse-eyebrow { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.13em; color:#557265; margin-bottom:16px; }
+.tools-page .page-hero, .devotional-browse .page-hero { background:#f3f3ed; color:var(--ink); text-align:center; padding:64px 24px; }
+.tools-page .page-hero h1, .devotional-browse .page-hero h1 { font-size:clamp(34px,4.5vw,54px); margin-bottom:20px; font-weight:600; }
+.tools-page .page-hero > p:last-child, .devotional-browse .page-hero > p:last-child { color:var(--muted); max-width:560px; margin:auto; }
+.tools-start { padding-top:56px; padding-bottom:40px; }
+.tools-start h2 { font-size:28px; margin-bottom:28px; }
+.starting-points { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.starting-points > a { display:flex; flex-direction:column; text-decoration:none; color:var(--ink); padding:30px; background:#e9eee5; border:1px solid transparent; border-radius:6px; }
+.starting-points > a:nth-child(2) { background:#e5ecec; }
+.starting-points > a:nth-child(3) { background:#f0e8da; }
+.starting-points > a:hover { border-color:#7d947f; }
+.starting-points h3 { font-size:25px; margin:0 0 18px; }
+.starting-points p { color:#56675f; font-size:14px; margin-bottom:28px; }
+.starting-action { font-size:13px; font-weight:700; margin-top:auto; }
+.tools-group-link { margin-top:28px; color:var(--muted); font-size:14px; }
+.tools-group-link a { color:var(--ink); }
+.tools-directory { margin-top:12px; margin-bottom:72px; }
+.tools-directory > summary { cursor:pointer; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:26px 8px; font-size:21px; font-weight:600; }
+.directory-hint { font-size:13px; font-weight:400; margin-left:18px; color:var(--muted); }
+.tools-page .toolbar { display:flex; flex-wrap:wrap; gap:20px; padding:28px 0 12px; }
+.tools-page .filters { display:flex; flex-wrap:wrap; gap:8px; }
+.tools-page .chip { background:transparent; color:var(--ink); border:1px solid var(--line); border-radius:4px; padding:8px 12px; font-size:12px; opacity:1; }
+.tools-page .chip.active { background:var(--ink); color:white; }
+.tools-page .search-wrap { flex:1 1 280px; }
+.tools-page .search-input { width:100%; padding:11px 14px; border:1px solid var(--line); border-radius:4px; background:var(--paper); font:inherit; font-size:14px; }
+.tools-page .results-count { font-size:12px; color:var(--muted); margin:16px 0; }
+.tools-page .content-section.resources { padding:0; }
+.tools-page .resource-grid { grid-template-columns:1fr 1fr; gap:0 32px; }
+.tools-page .resource-card { border:0; border-top:1px solid var(--line); border-radius:0; background:transparent; padding:24px 0; box-shadow:none; }
+.tools-page .resource-card:hover { transform:none; box-shadow:none; }
+.tools-page .resource-card:hover h3 { text-decoration:underline; }
+.tools-page .rc-top, .tools-page .rc-tags { display:none; }
+.tools-page .rc-body h3 { font-size:19px; margin:0 0 10px; }
+.tools-page .rc-body p { font-size:14px; color:var(--muted); }
+.browse-more { margin:24px 0 0; padding:12px 20px; border:1px solid var(--ink); background:transparent; color:var(--ink); border-radius:4px; font:inherit; cursor:pointer; }
+.tools-page .empty { padding:32px 0; color:var(--muted); }
+.latest-reading { margin-top:48px; margin-bottom:56px; display:flex; justify-content:space-between; align-items:center; gap:40px; background:#edf0e7; padding:40px; border-radius:6px; max-width:1064px; }
+.latest-reading h2 { font-size:clamp(27px,3vw,38px); max-width:620px; margin-bottom:16px; }
+.latest-reading p:not(.browse-eyebrow) { color:var(--muted); max-width:580px; margin-bottom:24px; }
+.browse-library-link { flex-shrink:0; font-size:13px; color:var(--ink); }
+.library-heading { scroll-margin-top:110px; }
+.library-heading h2 { font-size:30px; margin-bottom:12px; }
+.library-heading p { color:var(--muted); font-size:14px; }
+.devotional-browse .toolbar { display:flex; justify-content:flex-start; flex-wrap:wrap; gap:12px; background:transparent; border:0; margin-top:24px; padding-top:0; padding-bottom:8px; }
+.devotional-browse .toolbar .search-input { order:-1; flex:1 1 100%; width:100%; padding:14px; border:1px solid var(--line); border-radius:4px; font:inherit; background:var(--paper); }
+.devotional-browse .select { background:var(--paper); border:1px solid var(--line); color:var(--ink); font:inherit; font-size:13px; padding:10px 12px; border-radius:4px; }
+.devotional-browse .results-count { max-width:1120px; margin:0 auto; padding:12px 28px; font-size:12px; text-align:left; color:var(--muted); }
+.devotional-browse main.content-section { max-width:1120px; padding:8px 28px 60px; }
+.devotional-browse .archive-grid { display:block; }
+.devotional-browse .archive-card { display:block; position:relative; background:transparent; padding:24px 160px 24px 0; border:0; border-top:1px solid var(--line); border-radius:0; box-shadow:none; color:var(--ink); text-decoration:none; }
+.devotional-browse .archive-card:hover { transform:none; background:#f7f8f2; }
+.devotional-browse .ac-meta { color:#557265; font-size:12px; margin-bottom:8px; }
+.devotional-browse .ac-title { font-size:24px; margin-bottom:8px; color:var(--ink); }
+.devotional-browse .ac-subtitle { font-size:14px; color:var(--muted); margin:0; }
+.devotional-browse .ac-date { position:absolute; top:25px; right:12px; font-size:12px; color:var(--muted); }
+.devotional-browse .pager { justify-content:space-between; margin-top:24px; }
+.devotional-browse .pager button { background:var(--ink); color:white; border-radius:4px; padding:12px 18px; }
+.devotional-browse .pager button:disabled { opacity:.4; cursor:default; }
+.reading-back { display:inline-block; color:var(--ink); font-size:14px; margin:0 0 24px; }
+.devotional-reading .daily-wrap { max-width:800px; }
+.devotional-reading .daily-card { background:var(--paper); border:1px solid var(--line); box-shadow:none; border-radius:6px; padding:40px; }
+.devotional-reading .daily-section { line-height:1.8; }
+.devotional-reading .daily-section h3 { color:var(--ink); }
+.devotional-reading .nav-archive { border-top:1px solid var(--line); padding-top:24px; margin-top:32px; }
+.devotional-reading .nav-archive a { color:var(--ink); font-size:13px; }
+.pod-archive-link { display:inline-block; margin-top:24px; font-size:14px; color:var(--ink); }
+.podcasts-page .pod-featured { background:#e9eee5; padding:40px; }
+.podcasts-page .pod-featured audio { max-width:none; }
+.pod-library-heading { margin:48px 0 20px; scroll-margin-top:110px; }
+.pod-library-heading h2 { font-size:30px; margin-bottom:12px; }
+.pod-library-heading p { color:var(--muted); font-size:13px; }
+.pod-archive-row { display:block; padding:24px 0; margin-bottom:24px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:var(--ink); font-size:18px; }
+@media(max-width:768px) {
+  .starting-points { grid-template-columns:1fr; gap:16px; }
+  .starting-points > a { padding:24px; }
+  .starting-points p { margin-bottom:20px; }
+  .directory-hint { display:block; margin:10px 0 0; }
+  .tools-page .resource-grid { grid-template-columns:1fr; }
+  .latest-reading { margin:28px 24px 40px; padding:28px; flex-direction:column; align-items:flex-start; }
+  .devotional-browse .archive-card { padding:22px 0; }
+  .devotional-browse .ac-date { display:block; position:static; margin-top:12px; }
+  .devotional-reading .daily-card, .podcasts-page .pod-featured { padding:24px; }
+}
+
+/* Article reading layout: title first, with quiet metadata and optional audio. */
+.devotional-reading .daily-wrap { max-width:840px; padding:24px 28px 64px; }
+.devotional-reading .daily-card { padding:12px 16px 40px; border:0; border-radius:0; }
+.devotional-reading .daily-meta { gap:12px 20px; margin:0 0 24px; padding-bottom:16px; border-bottom:1px solid var(--line); font-size:12px; color:var(--muted); }
+.devotional-reading .daily-meta time { color:var(--muted); font-size:12px; }
+.devotional-reading .daily-series, .reading-category { margin:0; padding:0; font-size:11px; letter-spacing:.09em; color:#557265; font-weight:600; text-transform:uppercase; }
+.devotional-reading .daily-title { font-size:clamp(32px,4.5vw,48px); font-weight:600; color:var(--ink); line-height:1.13; letter-spacing:-.04em; margin:0 0 18px; }
+.devotional-reading .daily-subtitle { font-size:21px; line-height:1.4; color:var(--muted); font-weight:400; margin-top:16px; letter-spacing:-.015em; }
+.devotional-reading .daily-tagline { font-size:17px; color:var(--muted); font-style:normal; margin:0 0 24px; line-height:1.7; }
+.daily-listen { display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin:24px 0 12px; }
+.daily-listen .listen-btn { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 18px; border:1px solid var(--ink); border-radius:5px; background:var(--ink); color:white; font:600 13px/1.5 Arial,Helvetica,sans-serif; cursor:pointer; margin:0; }
+.daily-listen .listen-btn:hover { background:#426b60; color:white; }
+.reading-audio-note { font-size:12px; color:var(--muted); }
+.devotional-reading .tts-controls { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:0 0 12px; margin:0; }
+.tts-controls[hidden], .daily-listen[hidden] { display:none!important; }
+.devotional-reading .tts-btn { min-height:40px; padding:8px 12px; border:1px solid var(--line); background:var(--paper); color:var(--ink); border-radius:4px; font-size:12px; }
+.devotional-reading .tts-btn:hover:not(:disabled) { background:var(--wash); color:var(--ink); }
+.devotional-reading .tts-status { color:var(--muted); font-size:11px; }
+.devotional-reading .verse-block { margin:32px 0 36px; padding:24px 28px; background:#eff2e9; border-left:3px solid #7b987b; border-radius:0 5px 5px 0; color:var(--ink); font:19px/1.8 Georgia,serif; }
+.devotional-reading .verse-block strong { font-family:Arial,Helvetica,sans-serif; font-size:13px; }
+.devotional-reading .daily-section { margin-top:32px; font-size:17px; line-height:1.85; }
+.devotional-reading .daily-section h2, .devotional-reading .daily-section h3 { font-size:23px; font-weight:600; color:var(--ink); margin:32px 0 16px; }
+.devotional-reading .daily-section p + p { margin-top:18px; }
+.devotional-reading .daily-audio { background:var(--wash); border:1px solid var(--line); border-radius:5px; padding:24px; margin:28px 0; }
+.devotional-reading .daily-audio-title { font-size:16px; color:var(--ink); }
+.devotional-reading .daily-audio-note { font-size:13px; color:var(--muted); }
+.devotional-reading .share-row { margin-top:40px; gap:8px; }
+.devotional-reading .share-row a, .devotional-reading .share-row button { border:1px solid var(--line); border-radius:4px; background:var(--paper); color:var(--ink); font-size:12px; }
+@media(max-width:480px) {
+  .devotional-reading .daily-wrap { padding:20px 20px 48px; }
+  .devotional-reading .daily-card { padding:12px 0 32px; }
+  .devotional-reading .daily-section { font-size:16px; }
+  .devotional-reading .verse-block { padding:20px; font-size:18px; }
+  .devotional-reading .daily-meta { gap:10px; }
+}
+@media print { .daily-listen, .tts-controls, .reading-back { display:none!important; } }

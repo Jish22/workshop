@@ -124,27 +124,25 @@
   <!-- Google Analytics (same GA4 property as the homepage's Firebase analytics) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N48478JV2Z"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N48478JV2Z');</script>
+<link rel="stylesheet" href="/assets/browse.css">
 </head>
-<body>
+<body class="devotional-reading">
   <div id="site-header"></div>
 
-  <section class="page-hero">
-    <h1>Daily</h1>
-    <p>Scripture, reflection, and one clear step to live it out.</p>
-  </section>
 
   <main class="daily-wrap">
+    <a class="reading-back" href="/daily-archive.html">← All Devotionals</a>
     <article class="daily-card daily-article" id="dailyCard">
       <div class="daily-meta">
-        <span class="badge">Hidden Gem</span>
+        <span class="reading-category">The Daily</span>
         <time id="dDate" datetime=""></time>
-        <button class="listen-btn" id="listenDailyBtn">🔊 Listen</button>
       </div>
 
-      <h2 id="dTitle">First Things First</h2>
+      <h1 class="daily-title" id="dTitle">First Things First</h1>
       <p class="daily-subtitle" id="dSubtitle" hidden></p>
       <p class="daily-tagline" id="dTagline" hidden></p>
 
+      <div class="daily-listen"><button type="button" class="listen-btn" id="listenDailyBtn" aria-pressed="false">▶ Read aloud</button><span class="reading-audio-note">Audio reading</span></div>
       <div class="verse-block" id="dVerseBlock">
         <div><strong id="dRef">Matthew 6:33</strong></div>
         <div id="dVerse">But seek first the kingdom of God and His righteousness, and all these things will be added to you.</div>
@@ -173,7 +171,7 @@
 
       <div class="nav-archive">
         <a href="#" id="prevDay" aria-disabled="true" class="is-disabled">← Previous</a>
-        <a href="daily-archive.html">See Archive →</a>
+        <a href="daily-archive.html">All Devotionals</a>
         <a href="#" id="nextDay" aria-disabled="true" class="is-disabled">Next →</a>
       </div>
     </article>

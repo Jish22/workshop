@@ -1,19 +1,23 @@
-<!-- header.html -->
 <header>
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="logo">
-      <a href="/" class="site-link"><img src="/assets/images/thewrkshop-logo-transparent-trimmed.png" alt="TheWrkShop" class="site-logo" width="233" height="180"></a>
+      <a href="/" class="brand-link" aria-label="TheWrkShop home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>TheWrkShop</a>
     </div>
-
-    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
-
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">&#9776;</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="/upstream/">Start Here</a></li>
-      <li><a href="/daily.html">The Daily</a></li>
-      <li><a href="/leadership/">Leadership</a></li>
-      <li><a href="/get-known.html">Groups</a></li>
-      <li><a href="/resources.html">Resources</a></li>
-      <li><a href="/#about" data-scroll="#about">About</a></li>
+      <li><a href="/daily-archive.html" data-section="devotionals">Devotionals</a></li>
+      <li><a href="/podcasts.html" data-section="podcasts">Podcasts</a></li>
+      <li><a href="/resources.html" data-section="tools">Tools</a></li>
+      <li><a href="/studies/" data-section="studies">Studies</a></li>
+      <li><a href="/get-known.html" data-section="groups">Groups</a></li>
+      <li class="nav-more"><details id="nav-more"><summary>More</summary><ul class="nav-more-links">
+        <li><a href="/leadership/" data-section="leadership">Leadership</a></li>
+        <li><a href="/blog-archive.html" data-section="blog">Blog</a></li>
+        <li><a href="/library/" data-section="library">Browse Everything</a></li>
+        <li><a href="/#about">Our Story</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul></details></li>
+      <li><a class="nav-start" href="/upstream/" data-section="start">Start Here ↗</a></li>
     </ul>
   </nav>
 </header>

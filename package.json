@@ -27,6 +27,8 @@
     "dev:web": "vite",
     "build:home": "node scripts/build-home.js",
     "build:questions": "node scripts/build-questions.js",
-    "build:social": "node scripts/build-social.js"
+    "build:social": "node scripts/build-social.js",
+    "build:content": "npm run build:daily && npm run build:blog && npm run build:podcasts && npm run build:library && npm run build:home && npm run build:questions",
+    "predev:web": "npm run build:content"
   }
 }

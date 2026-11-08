@@ -18,132 +18,58 @@
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <style>
-    /* Page-specific light styles (keeps using your palette and classes) */
-    .page-hero {
-      background: #3e2c23;
-      color: #f4f1ee;
-      padding: 3.5rem 1rem;
-      text-align: center;
-    }
-    .page-hero h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom:.5rem; }
-    .page-hero p { opacity:.95; max-width: 720px; margin: 0 auto; }
-
-    .toolbar {
-      display:flex;
-      gap: .75rem;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      background: rgba(0,0,0,.04);
-      border-top: 1px solid rgba(0,0,0,.06);
-      border-bottom: 1px solid rgba(0,0,0,.06);
-    }
-
-    .search-wrap { position: relative; min-width: 260px; }
-
-    .search-input {
-      width: 100%;
-      padding: .65rem .9rem;
-      border-radius: 10px;
-      border: 1px solid rgba(0,0,0,.15);
-      outline: none;
-    }
-
-    .toolbar-login {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: .68rem 1rem;
-      border-radius: 10px;
-      background: #3e2c23;
-      color: #f4f1ee;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid rgba(62,44,35,.18);
-      box-shadow: 0 10px 18px rgba(62,44,35,.12);
-      transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
-      white-space: nowrap;
-    }
-
-    .toolbar-login:hover {
-      transform: translateY(-1px);
-      opacity: .96;
-      box-shadow: 0 14px 24px rgba(62,44,35,.16);
-    }
-
-    .results-count { text-align:center; padding:.5rem; color:#3e2c23; font-weight:600; }
-
-    .tag {
-      display:inline-block;
-      font-size:.85rem;
-      padding:.15rem .5rem;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,.12);
-      color:#3e2c23;
-      background:#f4f1ee;
-    }
-
-    .resource-card .rc-tags { margin-top:.5rem; display:flex; gap:.35rem; flex-wrap:wrap; }
-
-    .empty { text-align:center; padding:2rem; color:#6b5b53; }
-
-    /* little polish on grid for this page */
-    .resource-grid { margin-top: 1rem; }
-
-    @media (max-width: 700px) {
-      .toolbar {
-        justify-content: stretch;
-      }
-
-      .search-wrap,
-      .toolbar-login {
-        width: 100%;
-      }
-
-      .toolbar-login {
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/browse.css">
   <!-- Google Analytics (same GA4 property as the homepage's Firebase analytics) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N48478JV2Z"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N48478JV2Z');</script>
 </head>
-<body>
+<body class="tools-page">
 
   <!-- Header/Navbar -->
   <div id="site-header"></div>
 
+  <main id="tools-main">
   <!-- Page Hero -->
   <section class="page-hero">
-    <h1>Resources</h1>
-    <p>Field-tested tools, plans, and reads to build a steady life—faith, family, work.</p>
+    <p class="browse-eyebrow">Tools &amp; Resources</p><h1>One next step is enough.</h1>
+    <p>You don’t need to work on everything today. Start with what’s on your mind.</p>
   </section>
+
+
+  <section class="tools-start browse-container" aria-labelledby="tools-start-title">
+    <h2 id="tools-start-title">What would help you today?</h2>
+    <div class="starting-points">
+      <a href="/tools/pattern-finder/"><span class="browse-eyebrow">Understand your reactions</span><h3>I keep falling into the same pattern.</h3><p>A private 3–5 minute reflection to notice what’s underneath.</p><span class="starting-action">Start the Pattern Finder →</span></a>
+      <a href="/prayer/"><span class="browse-eyebrow">Make room for prayer</span><h3>I want to connect with God.</h3><p>Find a starting point for prayer, surrender, and trust.</p><span class="starting-action">Explore prayer →</span></a>
+      <a href="/sub-pages/resources/habit-checklist.html"><span class="browse-eyebrow">Build a daily rhythm</span><h3>I need a little more consistency.</h3><p>A simple weekly checklist for faith, family, and work.</p><span class="starting-action">Try the Habit Checklist →</span></a>
+    </div>
+    <p class="tools-group-link">Growing with others? <a href="/studies/">Find a group study →</a></p>
+  </section>
+  <details class="tools-directory browse-container" id="all-tools">
+    <summary><span>Looking for something specific?</span><span class="directory-hint">Browse all tools &amp; resources</span></summary>
 
   <!-- Filters + Search -->
   <section class="toolbar" aria-label="Resource Filters">
-    <div class="filters" role="tablist" aria-label="Filters">
-      <button class="chip active" data-tag="all" role="tab" aria-selected="true">All</button>
-      <button class="chip" data-tag="bible" role="tab">Bible Study</button>
-      <button class="chip" data-tag="habits" role="tab">Habits</button>
-      <button class="chip" data-tag="pdfs" role="tab">PDFs</button>
-      <button class="chip" data-tag="books" role="tab">Books</button>
-      <button class="chip" data-tag="tools" role="tab">Tools</button>
+    <div class="filters" role="group" aria-label="Filters">
+      <button class="chip active" data-tag="all" aria-pressed="true">All</button>
+      <button class="chip" data-tag="bible" aria-pressed="false">Bible Study</button>
+      <button class="chip" data-tag="habits" aria-pressed="false">Habits</button>
+      <button class="chip" data-tag="pdfs" aria-pressed="false">PDFs</button>
+      <button class="chip" data-tag="books" aria-pressed="false">Books</button>
+      <button class="chip" data-tag="tools" aria-pressed="false">Tools</button>
     </div>
 
     <div class="search-wrap" role="search">
-      <input id="resSearch" class="search-input" type="search" placeholder="Search resources… (e.g., discipline, prayer, plan)"/>
+      <input aria-label="Search all tools and resources" id="resSearch" class="search-input" type="search" placeholder="Search resources… (e.g., discipline, prayer, plan)"/>
     </div>
 
-    <a class="toolbar-login" href="login.html">Member Login</a>
+
   </section>
 
   <div class="results-count" id="resultsCount" aria-live="polite"></div>
 
   <!-- Resources Grid -->
-  <main class="content-section resources" aria-labelledby="gridTitle">
+  <section class="content-section resources" aria-labelledby="gridTitle">
     <h2 id="gridTitle" class="sr-only" style="position:absolute;left:-9999px">Resource List</h2>
     <div class="resource-grid" id="resource-grid">
       <!-- Fallback examples (replaced by JSON when available) -->
@@ -478,7 +404,10 @@
       </a>
     </div>
 
+    <button class="browse-more" id="moreResources" type="button" hidden>Show more resources</button>
     <p class="empty" id="emptyMsg" style="display:none">No resources match your filters—try clearing search or switching tags.</p>
+  </section>
+  </details>
   </main>
 
   <!-- Footer -->
@@ -506,13 +435,6 @@
     // Site name fill
     document.querySelectorAll('.sitename').forEach(el => el.textContent = 'TheWrkShop');
 
-    // Mobile nav toggle
-    (function(){
-      const btn = document.getElementById('hamburger');
-      const nav = document.getElementById('nav-links');
-      if(btn && nav){ btn.addEventListener('click', () => nav.classList.toggle('open')); }
-    })();
-
     // Resources loader (static JSON optional) + filter/search logic
     (function(){
       const grid = document.getElementById('resource-grid');
@@ -521,6 +443,8 @@
       const emptyMsg = document.getElementById('emptyMsg');
       const countEl = document.getElementById('resultsCount');
 
+      let limit = 6;
+      const moreButton = document.getElementById('moreResources');
       let activeTag = 'all';
       let allCards = Array.from(grid.querySelectorAll('.resource-card'));
       let datasetLoaded = false;
@@ -561,28 +485,31 @@
         let visibleCount = 0;
         allCards.forEach(card => {
           const show = matchesTag(card) && matchesSearch(card, q);
-          card.style.display = show ? '' : 'none';
           if(show) visibleCount++;
+          card.style.display = show && visibleCount <= limit ? '' : 'none';
         });
         emptyMsg.style.display = visibleCount === 0 ? '' : 'none';
         if(countEl){
-          countEl.textContent = visibleCount + (visibleCount === 1 ? ' result' : ' results');
+          countEl.textContent = `Showing ${Math.min(limit, visibleCount)} of ${visibleCount} resources`;
+          moreButton.hidden = visibleCount <= limit;
         }
       }
 
+      moreButton.addEventListener('click', () => { limit += 6; applyFilters(); });
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           chips.forEach(c => c.classList.remove('active'));
           chip.classList.add('active');
+          limit = 6;
           activeTag = chip.getAttribute('data-tag') || 'all';
-          chip.setAttribute('aria-selected','true');
-          chips.forEach(c => { if(c!==chip) c.removeAttribute('aria-selected'); });
+          chip.setAttribute('aria-pressed','true');
+          chips.forEach(c => { if(c!==chip) c.setAttribute('aria-pressed','false'); });
           applyFilters();
         });
       });
 
       if(search){
-        search.addEventListener('input', applyFilters);
+        search.addEventListener('input', () => { limit = 6; applyFilters(); });
       }
 
       (async function loadJSON(){

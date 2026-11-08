@@ -191,7 +191,13 @@ async function fetchRssItems() {
 async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
 
-  const rssItems  = await fetchRssItems();
+  let rssItems = [];
+  try {
+    rssItems = await fetchRssItems();
+  } catch (err) {
+    // A feed hiccup should never break the whole site build.
+    console.warn('Podcast RSS unavailable; continuing with site-hosted episodes only:', err.message);
+  }
   const siteItems = await loadSiteEpisodes();
   let items = [...siteItems, ...rssItems];
 

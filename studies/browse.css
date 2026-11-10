@@ -1,0 +1,26 @@
+/* Studies directory: static links keep every study available without JavaScript. */
+.studies-browse { background:var(--paper); color:var(--ink); }
+.studies-container { max-width:1120px; padding:0 28px; margin:0 auto; }
+.studies-browse .browse-eyebrow { color:#557265; font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; margin:0 0 16px; }
+.studies-hero { padding:72px 24px; text-align:center; background:#edf0e7; }
+.studies-hero h1 { font-size:clamp(34px,5vw,56px); line-height:1.12; font-weight:600; letter-spacing:-.035em; margin:0 0 24px; }
+.studies-hero > p:not(.browse-eyebrow) { max-width:650px; margin:0 auto 28px; color:var(--muted); line-height:1.8; }
+.studies-intro { display:grid; grid-template-columns:1fr 1fr; gap:48px; padding-top:56px; padding-bottom:48px; align-items:center; }
+.studies-browse h2 { font-size:clamp(26px,3vw,34px); line-height:1.2; margin:0 0 16px; }
+.studies-intro > p, .study-card p, .studies-start > p:not(.browse-eyebrow) { color:var(--muted); line-height:1.8; }
+.studies-list { scroll-margin-top:110px; }
+.study-card { display:grid; grid-template-columns:80px 1fr; gap:28px; padding:36px 0; border-top:1px solid var(--line); }
+.study-number { background:#e9eee5; color:#557265; border-radius:6px; width:72px; height:80px; display:grid; place-items:center; font-size:24px; }
+.study-card:nth-of-type(2) .study-number { background:#e5ecec; }
+.study-card:nth-of-type(3) .study-number { background:#f0e8da; }
+.study-card h3 { font-size:clamp(24px,3vw,32px); margin:0 0 16px; line-height:1.25; }
+.study-card h3 a { color:var(--ink); text-decoration:none; }
+.study-card h3 a:hover { text-decoration:underline; }
+.study-card p { max-width:760px; margin:0 0 16px; }
+.study-card .study-includes { font-size:13px; }
+.study-links { display:flex; flex-wrap:wrap; gap:16px 24px; align-items:center; margin-top:24px; }
+.study-links > a:not(.button-primary) { color:var(--ink); font-size:14px; text-underline-offset:4px; }
+.studies-start { background:#f3f3ed; padding:36px; margin-top:28px; margin-bottom:64px; border-radius:6px; max-width:1064px; }
+.studies-start > p { max-width:700px; }
+.studies-browse a:focus-visible { outline:3px solid #557265; outline-offset:5px; }
+@media(max-width:700px) { .studies-hero { padding:48px 24px; } .studies-intro { grid-template-columns:1fr; gap:8px; padding-top:36px; padding-bottom:32px; } .study-card { grid-template-columns:1fr; gap:20px; padding:28px 0; } .study-number { width:52px; height:52px; font-size:18px; } .studies-start { margin:24px 24px 48px; padding:28px; } }

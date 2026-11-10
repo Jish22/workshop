@@ -31,8 +31,8 @@
   <main id="tools-main">
   <!-- Page Hero -->
   <section class="page-hero">
-    <p class="browse-eyebrow">Tools &amp; Resources</p><h1>One next step is enough.</h1>
-    <p>You don’t need to work on everything today. Start with what’s on your mind.</p>
+    <p class="browse-eyebrow">Tools &amp; Resources</p><h1>Free Tools &amp; Resources for Men</h1>
+    <p>One next step is enough. Explore free study tools, habits, and reading plans for Christian men. Start with what’s on your mind.</p>
   </section>
 
 
@@ -45,7 +45,7 @@
     </div>
     <p class="tools-group-link">Growing with others? <a href="/studies/">Find a group study →</a></p>
   </section>
-  <details class="tools-directory browse-container" id="all-tools">
+  <details class="tools-directory browse-container" id="all-tools" open>
     <summary><span>Looking for something specific?</span><span class="directory-hint">Browse all tools &amp; resources</span></summary>
 
   <!-- Filters + Search -->
@@ -231,11 +231,18 @@
         <div class="rc-top">👥</div>
         <div class="rc-body">
           <h3>Group Studies</h3>
-          <p>Ready-to-run men’s Bible studies and leader guides: The Reflex vs. the Response (Luke 6:45) and The Doing vs. the Dwelling (John 15).</p>
+          <p>Explore all three Bible studies: a single-session Luke 6:45 study, an eight-session John 15 series, and Simon → Peter → Shepherd’s 24-study formation journey.</p>
           <div class="rc-tags">
             <span class="tag">Bible Study</span><span class="tag">PDFs</span>
           </div>
         </div>
+      </a>
+
+      <a class="resource-card" href="/studies/reflex-vs-response/" data-tags="bible,pdfs">
+        <div class="rc-body"><h3>The Reflex vs. the Response</h3><p>A one-session Luke 6:45 group study on responding under pressure, with a leader guide, printable handout, and seven-day Reflex Journal.</p><div class="rc-tags"><span class="tag">Bible Study</span><span class="tag">PDFs</span></div></div>
+      </a>
+      <a class="resource-card" href="/studies/simon-peter-shepherd/" data-tags="bible,tools">
+        <div class="rc-body"><h3>Simon → Peter → Shepherd</h3><p>A 24-study, 168-day formation journey through Peter’s life, with Scripture, daily practices, journaling, and leader resources.</p><div class="rc-tags"><span class="tag">Bible Study</span><span class="tag">Tools</span></div></div>
       </a>
 
       <a class="resource-card" href="/studies/doing-vs-dwelling/" data-tags="bible,pdfs">
@@ -404,7 +411,6 @@
       </a>
     </div>
 
-    <button class="browse-more" id="moreResources" type="button" hidden>Show more resources</button>
     <p class="empty" id="emptyMsg" style="display:none">No resources match your filters—try clearing search or switching tags.</p>
   </section>
   </details>
@@ -443,8 +449,6 @@
       const emptyMsg = document.getElementById('emptyMsg');
       const countEl = document.getElementById('resultsCount');
 
-      let limit = 6;
-      const moreButton = document.getElementById('moreResources');
       let activeTag = 'all';
       let allCards = Array.from(grid.querySelectorAll('.resource-card'));
       let datasetLoaded = false;
@@ -486,21 +490,18 @@
         allCards.forEach(card => {
           const show = matchesTag(card) && matchesSearch(card, q);
           if(show) visibleCount++;
-          card.style.display = show && visibleCount <= limit ? '' : 'none';
+          card.style.display = show ? '' : 'none';
         });
         emptyMsg.style.display = visibleCount === 0 ? '' : 'none';
         if(countEl){
-          countEl.textContent = `Showing ${Math.min(limit, visibleCount)} of ${visibleCount} resources`;
-          moreButton.hidden = visibleCount <= limit;
+          countEl.textContent = `Showing ${visibleCount} of ${allCards.length} resources`;
         }
       }
 
-      moreButton.addEventListener('click', () => { limit += 6; applyFilters(); });
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           chips.forEach(c => c.classList.remove('active'));
           chip.classList.add('active');
-          limit = 6;
           activeTag = chip.getAttribute('data-tag') || 'all';
           chip.setAttribute('aria-pressed','true');
           chips.forEach(c => { if(c!==chip) c.setAttribute('aria-pressed','false'); });
@@ -509,7 +510,7 @@
       });
 
       if(search){
-        search.addEventListener('input', () => { limit = 6; applyFilters(); });
+        search.addEventListener('input', applyFilters);
       }
 
       (async function loadJSON(){

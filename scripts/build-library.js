@@ -87,7 +87,14 @@ ${blog.map(e => `        <li><a href="${esc(e.href)}">${esc(e.title || 'Untitled
 ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><span class="lib-note">${esc(shortDate(e.date))}${e.verse_ref ? ` · ${esc(e.verse_ref)}` : ''}</span></li>`).join('\n')}
       </ul></div></details>`).join('\n');
 
+  const studies = [
+    { href: '/studies/reflex-vs-response/', title: 'The Reflex vs. the Response' },
+    { href: '/studies/doing-vs-dwelling/', title: 'The Doing vs. the Dwelling' },
+    { href: '/studies/simon-peter-shepherd/', title: 'Simon → Peter → Shepherd' }
+  ];
+
   const all = [
+    ...studies.map(e => ({ url: SITE_URL + e.href, name: e.title })),
     ...leadership.map(e => ({ url: SITE_URL + e.href, name: dailyName(e) })),
     ...blog.map(e => ({ url: SITE_URL + e.href, name: e.title || 'Untitled' })),
     ...daily.filter(e => e.category !== LEADERSHIP_CATEGORY).map(e => ({ url: SITE_URL + e.href, name: dailyName(e) }))
@@ -175,7 +182,7 @@ ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><s
   <div id="site-header"></div>
 
   <section class="page-hero">
-    <h1>Browse Everything</h1>
+    <h1>The Library</h1>
     <p>Choose a section to explore. Open a month to browse its devotionals.</p>
   </section>
 
@@ -184,7 +191,15 @@ ${list.map(e => `        <li><a href="${esc(e.href)}">${esc(dailyName(e))}</a><s
       <a href="#leadership">Leadership &amp; Culture</a>
       <a href="#blog">Blog</a>
       <a href="#daily">Daily Devotionals</a>
+      <a href="#studies">Bible Studies</a>
     </nav>
+
+    <details class="lib-section" id="studies" name="library-sections">
+      <summary><h2>Bible Studies</h2><span class="lib-count">${studies.length} studies</span></summary>
+      <div class="lib-section-content"><ul class="lib-list">
+${studies.map(e => `        <li><a href="${esc(e.href)}">${esc(e.title)}</a></li>`).join('\n')}
+      </ul><p><a class="lib-more" href="/studies/">Explore all Bible studies →</a></p></div>
+    </details>
 
     <details class="lib-section" id="leadership" name="library-sections">
       <summary><h2>Leadership &amp; Culture</h2><span class="lib-count">${leadership.length} posts</span></summary>

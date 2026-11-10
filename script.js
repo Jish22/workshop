@@ -96,7 +96,7 @@ function enhanceSiteNavigation() {
   const footer = document.querySelector('footer .footer-links');
   if (footer) {
     footer.replaceChildren();
-    const destinations = [...Object.values(siteSections),
+    const destinations = [{label:'The Daily', href:'/daily.html'}, ...Object.values(siteSections),
       {label:'Our Story', href:'/#about'}, {label:'Contact', href:'/#contact'}, {label:'Privacy', href:'/privacy/'}];
     destinations.forEach(destination => {
       const link = document.createElement('a');

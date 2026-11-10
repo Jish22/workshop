@@ -51,6 +51,7 @@ const RECURSIVE_PUBLIC_DIRS = [
   'daily',
   'leadership',
   'library',
+  'studies',
   'pages',
   'sub-pages',
   'upstream',

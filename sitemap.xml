@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thewrkshop.com/</loc>
-    <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/after-the-amen/</loc>
@@ -22,11 +22,11 @@
   </url>
   <url>
     <loc>https://thewrkshop.com/daily-archive.html</loc>
-    <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/daily.html</loc>
-    <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/get-known.html</loc>
@@ -38,15 +38,15 @@
   </url>
   <url>
     <loc>https://thewrkshop.com/leadership/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-06</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/library/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-06</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/one-verse-man/</loc>
-    <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/patterns/</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://thewrkshop.com/podcasts.html</loc>
-    <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/prayer/</loc>
@@ -73,7 +73,11 @@
   </url>
   <url>
     <loc>https://thewrkshop.com/resources.html</loc>
-    <lastmod>2026-10-29T16:55:13-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/upstream/</loc>
@@ -130,6 +134,14 @@
   <url>
     <loc>https://thewrkshop.com/blog/2026-10-23_what-your-leadership-is-teaching-the-room/</loc>
     <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/blog/2026-10-30_what-power-quietly-does-to-a-leader/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/blog/2026-11-06_the-patterns-you-inherited/</loc>
+    <lastmod>2026-11-06</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/daily/1-Samuel-16-7_who-have-i-reduced_2026-07-28.html</loc>
@@ -604,6 +616,18 @@
     <lastmod>2026-09-17</lastmod>
   </url>
   <url>
+    <loc>https://thewrkshop.com/leadership/rules-vs-people/</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/leadership/the-say-do-gap/</loc>
+    <lastmod>2026-11-06</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/leadership/tradition-vs-scripture/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/leadership/what-kind-of-room-are-you-creating/</loc>
     <lastmod>2026-10-14</lastmod>
   </url>
@@ -616,8 +640,16 @@
     <lastmod>2026-10-20</lastmod>
   </url>
   <url>
+    <loc>https://thewrkshop.com/leadership/when-a-leaders-fear-becomes-the-system/</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/leadership/when-leaders-cant-admit-they-were-wrong/</loc>
     <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/leadership/when-leaders-inherit-a-culture-they-didnt-build/</loc>
+    <lastmod>2026-11-02</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/leadership/when-leaders-live-in-an-echo-chamber/</loc>
@@ -665,7 +697,7 @@
   </url>
   <url>
     <loc>https://thewrkshop.com/one-verse-man/group-facilitator-guide.html</loc>
-    <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/patterns/avoider/</loc>
@@ -742,17 +774,56 @@
     <loc>https://thewrkshop.com/questions/how-to-control-anger-as-a-christian-man/</loc>
   </url>
   <url>
+    <loc>https://thewrkshop.com/questions/how-to-quit-porn-as-a-christian-man/</loc>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/questions/how-to-start-a-mens-group/</loc>
   </url>
   <url>
     <loc>https://thewrkshop.com/questions/how-to-stop-needing-approval/</loc>
   </url>
   <url>
+    <loc>https://thewrkshop.com/questions/how-to-stop-worrying-and-trust-god/</loc>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/questions/what-is-my-purpose-as-a-man/</loc>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/questions/why-do-i-feel-empty/</loc>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/questions/why-do-i-feel-so-alone/</loc>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/questions/why-do-i-keep-falling-into-the-same-sin/</loc>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/doing-vs-dwelling/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/reflex-vs-response/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/simon-peter-shepherd/</loc>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/tools/belief-under-pressure/</loc>
     <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/built-for-more/</loc>
+    <lastmod>2026-10-30T23:15:31-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/dont-look-back/</loc>
+    <lastmod>2026-10-30T22:50:33-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/filter-lens/</loc>
+    <lastmod>2026-10-30T22:20:39-05:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/tools/growth-journal/</loc>
@@ -763,24 +834,68 @@
     <lastmod>2026-10-29T12:12:37-05:00</lastmod>
   </url>
   <url>
+    <loc>https://thewrkshop.com/tools/invisible-life/</loc>
+    <lastmod>2026-10-30T23:00:58-05:00</lastmod>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/tools/kingdom-first/</loc>
     <lastmod>2026-10-29T12:12:37-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/other-cheek/</loc>
+    <lastmod>2026-10-30T23:28:44-05:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/tools/pattern-finder/</loc>
     <lastmod>2026-10-29T12:12:37-05:00</lastmod>
   </url>
   <url>
+    <loc>https://thewrkshop.com/tools/sharpened/</loc>
+    <lastmod>2026-10-30T22:39:06-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/steward-or-owner/</loc>
+    <lastmod>2026-10-30T12:43:33-05:00</lastmod>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/tools/unexamined-heart/</loc>
     <lastmod>2026-10-29T12:12:37-05:00</lastmod>
   </url>
   <url>
+    <loc>https://thewrkshop.com/tools/what-feeds-it/</loc>
+    <lastmod>2026-10-30T12:43:33-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/whats-in-your-hand/</loc>
+    <lastmod>2026-10-30T20:04:17Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/tools/who-gets-access/</loc>
+    <lastmod>2026-10-30T23:06:28-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/doing-vs-dwelling/handout/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/doing-vs-dwelling/leader-guide/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/reflex-vs-response/handout/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://thewrkshop.com/studies/reflex-vs-response/leader-guide/</loc>
+    <lastmod>2026-10-30T22:06:43-05:00</lastmod>
+  </url>
+  <url>
     <loc>https://thewrkshop.com/sub-pages/resources/habit-checklist.html</loc>
-    <lastmod>2026-10-21T00:57:44-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/sub-pages/resources/seek-first-plan.html</loc>
-    <lastmod>2026-10-23T18:49:04-05:00</lastmod>
+    <lastmod>2026-11-07T23:40:39-06:00</lastmod>
   </url>
   <url>
     <loc>https://thewrkshop.com/sub-pages/resources/starter-kit.html</loc>

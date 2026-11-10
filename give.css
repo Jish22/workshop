@@ -1,0 +1,17 @@
+/* Give page + header Give button */
+.gv-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; max-width: 1040px; }
+.gv-card { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--ember); padding: 1.5rem; display: grid; gap: 1rem; }
+.gv-card input { position: absolute; opacity: 0; pointer-events: none; }
+.gv-toggle { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); }
+.gv-toggle span { display: block; text-align: center; padding: .7rem; cursor: pointer; font-family: 'Space Mono', monospace; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.gv-toggle input:checked + span { background: var(--ink); color: var(--white); }
+.gv-amounts { border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+.gv-amounts span { display: block; text-align: center; padding: .9rem .25rem; border: 1px solid var(--line); background: var(--bone); cursor: pointer; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.25rem; }
+.gv-amounts input:checked + span { border-color: var(--ember); background: #fbe9df; color: var(--ember); }
+.gv-card input:focus-visible + span { outline: 2px solid var(--ember); outline-offset: 2px; }
+.gv-impact { margin: 0; min-height: 1.6em; color: var(--ash); font-size: .95rem; }
+.gv-submit { width: 100%; font-size: .9rem; padding: 1.1rem; }
+.gv-secure { margin: 0; text-align: center; }
+.gv-preview-msg { margin: 0; padding: .7rem .9rem; background: var(--parchment); border-left: 3px solid var(--gold); font-size: .9rem; }
+.gv-list { padding-left: 1.1rem; display: grid; gap: .6rem; margin: 0; }
+@media (max-width: 760px) { .gv-layout { grid-template-columns: 1fr; } }

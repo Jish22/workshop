@@ -20,6 +20,11 @@ const CONTENT_DIR = path.join(ROOT, 'content', 'daily');
 const DATA_DIR = path.join(ROOT, 'data');
 const DAILY_DIR = path.join(ROOT, 'daily');
 const TPL_PATH = path.join(ROOT, 'templates', 'daily.html');
+// Standalone leadership pieces (not Dailies): one JSON each, same shape as a Daily plus
+// "related" [{href,title,note}] and optional "sources" [{label,href}]. Built at /leadership/<slug>/,
+// featured at the top of /leadership/, and linked from every Daily listed in "related".
+// They never enter the Daily archive, feeds or emails.
+const FEATURE_DIR = path.join(ROOT, 'content', 'leadership');
 const REDIRECTS = path.join(ROOT, '_redirects');
 
 const START_DATE = '2025-09-02';
@@ -107,6 +112,14 @@ function normalizeBlock(block) {
   }
 
   if (type === 'flow') return normalizeFlowBlock(block);
+
+  // A small "Source:" line under a claim, linking to where it comes from
+  if (type === 'source') {
+    const text = cleanString(block.text);
+    const href = cleanString(block.href);
+    if (!text) return null;
+    return /^https:\/\/[^\s"'<>]+$/.test(href) ? { type, text, href } : { type, text };
+  }
 
   return null;
 }
@@ -311,6 +324,13 @@ function renderBlock(block) {
 
   if (block.type === 'flow') return renderFlowHtml(block, escapeHtml);
 
+  if (block.type === 'source') {
+    const label = block.href
+      ? `<a href="${escapeHtml(block.href)}" target="_blank" rel="noopener" style="color:#6b4a36;">${escapeHtml(block.text)}</a>`
+      : escapeHtml(block.text);
+    return `<p class="daily-source-note" style="font-size:.85rem;color:#6b5b53;margin:-.25rem 0 1rem;">Source: ${label}</p>`;
+  }
+
   return '';
 }
 
@@ -513,13 +533,23 @@ async function writeLatestDailyJson(visible) {
   );
 }
 
-async function buildDailyPages(visible) {
+async function buildDailyPages(visible, features = []) {
   const tpl = await fs.readFile(TPL_PATH, 'utf-8');
+  const biggerPicture = biggerPictureMap(features);
 
   for (let i = 0; i < visible.length; i++) {
     const e = visible[i];
     const prev = i > 0 ? visible[i - 1] : null;
     const next = i < visible.length - 1 ? visible[i + 1] : null;
+    await writeEntryPage(tpl, e, prev, next, { extraHtml: biggerPictureHtml(biggerPicture.get(pagePathFor(e))) });
+  }
+  for (const f of features) {
+    await writeEntryPage(tpl, f, null, null, { feature: true, extraHtml: featureExtrasHtml(f) });
+  }
+}
+
+async function writeEntryPage(tpl, e, prev, next, opts = {}) {
+  {
 
     const declarationSection = findSection(e, ['declaration']);
     const actionSection = findSection(e, ['action_step', 'one_minute_win']);
@@ -578,7 +608,7 @@ async function buildDailyPages(visible) {
       DATE: e.date,
       VERSE_REF: buildPrimaryVerseRefHTML(e),
       VERSE_TEXT: buildPrimaryVerseTextHTML(e),
-      INSIGHT_HTML: buildInsightHTML(e),
+      INSIGHT_HTML: buildInsightHTML(e) + (opts.extraHtml || ''),
       ONE_MINUTE_WIN: actionSection ? sectionToPlainText(actionSection) : (e.one_minute_win || ''),
       DECLARATION: declarationSection ? sectionToPlainText(declarationSection) : (e.declaration || ''),
       PREV_HREF: prev ? pagePathFor(prev) : '#',
@@ -587,9 +617,14 @@ async function buildDailyPages(visible) {
     });
 
     // Drop the Action Step / Declaration boxes when this daily doesn't have them
-    const cleaned = html
+    let cleaned = html
       .replace(/\s*<section class="daily-section">\s*<h3>Action Step<\/h3>\s*<div class="action-step" id="dActionStep">\s*<\/div>\s*<\/section>/, '')
       .replace(/\s*<section class="daily-section">\s*<h3>Declaration<\/h3>\s*<p class="declaration-text" id="dDeclaration">\s*<\/p>\s*<\/section>/, '');
+    // A standalone piece has no previous/next Daily: link back to the leadership hub instead
+    if (opts.feature) {
+      cleaned = cleaned.replace(/<div class="nav-archive">[\s\S]*?<\/div>/,
+        '<div class="nav-archive"><a href="/leadership/">← All leadership posts</a></div>');
+    }
 
     const outFile = pageFileFor(e);
     await fs.mkdir(path.dirname(outFile), { recursive: true });
@@ -702,13 +737,92 @@ function jsonLdFor(e, seo) {
     ...(Array.isArray(e.related_scriptures) ? e.related_scriptures : [])
   ].map(cleanString).filter(Boolean);
   if (refs.length) data.about = refs.map(ref => ({ '@type': 'CreativeWork', name: ref }));
+  const cites = (Array.isArray(e.sources) ? e.sources : [])
+    .filter(x => x && cleanString(x.label))
+    .map(x => ({
+      '@type': cleanString(x.doi) ? 'ScholarlyArticle' : 'CreativeWork',
+      name: cleanString(x.title) || cleanString(x.label),
+      ...(cleanString(x.href) ? { url: cleanString(x.href) } : {}),
+      ...(cleanString(x.doi) ? { sameAs: `https://doi.org/${cleanString(x.doi)}` } : {})
+    }));
+  if (cites.length) data.citation = cites;
   // keep "</script>" out of the inline JSON
   return JSON.stringify(data).replace(/</g, '\\u003c');
 }
 
+// ---------- Standalone leadership pieces ----------
+
+async function readFeatureEntries(buildUntil) {
+  let files = [];
+  try { files = (await fs.readdir(FEATURE_DIR)).filter(f => f.endsWith('.json')); } catch { return []; }
+  const out = [];
+  for (const f of files) {
+    const e = normalizeDailyEntry(JSON.parse(await fs.readFile(path.join(FEATURE_DIR, f), 'utf-8')));
+    if (!e.date || !/^\d{4}-\d{2}-\d{2}$/.test(e.date)) throw new Error(`Bad/missing "date" in content/leadership/${f}`);
+    if (!hasLeadershipPage(e)) throw new Error(`content/leadership/${f} needs category "${LEADERSHIP_CATEGORY}" and a lowercase slug`);
+    if (e.date > buildUntil) continue; // not released yet
+    out.push({ ...e, kind: 'feature' });
+  }
+  return out.sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function safeHref(href = '') {
+  const h = cleanString(href);
+  return /^(\/[A-Za-z0-9/_.#?=&-]*|https:\/\/[^\s"'<>]+)$/.test(h) ? h : '';
+}
+
+// Daily page path -> the standalone pieces that list it in "related"
+function biggerPictureMap(features) {
+  const map = new Map();
+  for (const f of features) {
+    for (const r of Array.isArray(f.related) ? f.related : []) {
+      const href = safeHref(r && r.href);
+      if (!href) continue;
+      if (!map.has(href)) map.set(href, []);
+      map.get(href).push(f);
+    }
+  }
+  return map;
+}
+
+function biggerPictureHtml(features = []) {
+  if (!features || !features.length) return '';
+  return features.map(f => `
+    <aside class="daily-bigger-picture" style="margin:1.5rem 0;padding:1rem 1.15rem;border-left:4px solid #b08a5a;background:#f4f1ee;border-radius:10px;">
+      <p style="margin:0 0 .3rem;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#735640;">Part of a bigger picture</p>
+      <p style="margin:0;"><a href="${pagePathFor(f)}" style="color:#3e2c23;font-weight:700;">${escapeHtml(cleanString(f.headline) || f.title)} →</a></p>
+      ${cleanString(f.tagline) ? `<p style="margin:.3rem 0 0;font-style:italic;color:#3e2c23;">${escapeHtml(cleanString(f.tagline))}</p>` : ''}
+    </aside>`).join('\n');
+}
+
+function featureExtrasHtml(f) {
+  const related = (Array.isArray(f.related) ? f.related : [])
+    .map(r => ({ href: safeHref(r && r.href), title: cleanString(r && r.title), note: cleanString(r && r.note) }))
+    .filter(r => r.href && r.title);
+  const sources = (Array.isArray(f.sources) ? f.sources : [])
+    .map(x => ({ href: safeHref(x && x.href), label: cleanString(x && x.label) }))
+    .filter(x => x.label);
+  let html = '';
+  if (related.length) {
+    html += `
+    <section class="daily-section daily-section-keep-reading">
+      <h3 class="daily-section-title">Keep Reading</h3>
+      <ul>${related.map(r => `<li><a href="${r.href}" style="color:#3e2c23;font-weight:600;">${escapeHtml(r.title)}</a>${r.note ? ` <span style="color:#6b5b53;">· ${escapeHtml(r.note)}</span>` : ''}</li>`).join('')}</ul>
+    </section>`;
+  }
+  if (sources.length) {
+    html += `
+    <section class="daily-section daily-section-sources">
+      <h3 class="daily-section-title">Sources</h3>
+      <ul style="font-size:.9rem;">${sources.map(x => `<li>${x.href ? `<a href="${x.href}" target="_blank" rel="noopener" style="color:#6b4a36;">${escapeHtml(x.label)}</a>` : escapeHtml(x.label)}</li>`).join('')}</ul>
+    </section>`;
+  }
+  return html;
+}
+
 // ---------- Leadership hub (/leadership/) ----------
 
-async function buildLeadershipHub(visible) {
+async function buildLeadershipHub(visible, features = []) {
   const posts = visible
     .filter(e => cleanString(e.category) === LEADERSHIP_CATEGORY)
     .slice()
@@ -742,7 +856,7 @@ async function buildLeadershipHub(visible) {
     isPartOf: { '@id': 'https://thewrkshop.com/#website' },
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: posts.map((e, i) => ({
+      itemListElement: [...features, ...posts].map((e, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         url: `${SITE_URL}${pagePathFor(e)}`,
@@ -751,12 +865,21 @@ async function buildLeadershipHub(visible) {
     }
   };
 
+  const featured = features.map(e => `
+      <article class="lead-card lead-card--featured" style="border:2px solid #b08a5a;">
+        <p class="lead-series">Start here</p>
+        <h2><a href="${pagePathFor(e)}">${escapeHtml(cleanString(e.headline) || e.title)}</a></h2>
+        ${cleanString(e.headline_sub) ? `<p class="lead-sub">${escapeHtml(cleanString(e.headline_sub))}</p>` : ''}
+        ${e.tagline ? `<p class="lead-tagline">${escapeHtml(e.tagline)}</p>` : ''}
+        <a class="lead-read" href="${pagePathFor(e)}">Read →</a>
+      </article>`).join('\n');
+
   const html = fill(tpl, {
-    CARDS_HTML: cards,
+    CARDS_HTML: featured + cards,
     JSON_LD: JSON.stringify(itemList).replace(/</g, '\\u003c')
   });
   await fs.writeFile(path.join(outDir, 'index.html'), html, 'utf-8');
-  return posts.length;
+  return posts.length + features.length;
 }
 
 // ---------- Email feed (Kit RSS-to-email reads this) ----------
@@ -1005,9 +1128,10 @@ async function main() {
   await rebuildDailyOutputDir();
   await writeArchiveJson(visible);
   await writeLatestDailyJson(visible.filter(e => e.date <= today));
-  await buildDailyPages(visible);
-  const shareCount = await buildSharePages(visible);
-  const leadershipCount = await buildLeadershipHub(visible);
+  const features = await readFeatureEntries(buildUntil);
+  await buildDailyPages(visible, features);
+  const shareCount = await buildSharePages([...visible, ...features]);
+  const leadershipCount = await buildLeadershipHub(visible, features);
   await writeDailyFeed(visible);
 
   console.log(

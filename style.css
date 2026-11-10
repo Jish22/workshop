@@ -1933,3 +1933,11 @@ footer {
 .home-studies { padding-top:40px; padding-bottom:40px; }
 .home-studies h2 { margin-bottom:16px; }
 .home-studies > p:not(.eyebrow) { max-width:700px; color:var(--muted); line-height:1.8; margin-bottom:24px; }
+/* Header "Give" button (shown only once giving is live; see scripts/shared/seasonal.js) */
+.navbar .nav-links li.nav-give a.give-btn {
+  background: #c4501a; color: #fff; padding: .35rem .95rem; border-radius: 999px; font-weight: 700;
+}
+.navbar .nav-links li.nav-give a.give-btn:hover { background: #d4b49c; color: #3e2c23; }
+@media (max-width: 768px) {
+  .nav-links li.nav-give a.give-btn { display: inline-block; margin-top: .25rem; }
+}

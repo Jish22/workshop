@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "22"
   TZ = "America/Chicago"
+  # TheWrkShop Deep Dive (Spotify for Creators feed) - fills podcasts.html and the home page "latest episode"
+  PODCAST_RSS_URL = "https://anchor.fm/s/1029010c0/podcast/rss"
 
 [[headers]]
   for = "/data/*"
